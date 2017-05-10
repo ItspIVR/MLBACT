@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@30335550:1494341036369" name="Decision_CardNum" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Decision_CardNum" default_exit_state="F">
+        <exit_state name="T" conjugate="and">
+            <number operator="less">
+                <data>
+                    <element name="CardNumCounter" variable="count" />
+                </data>
+                <constant_number value="3" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<callflow id="Callflow@17974192:1494272205903" version="6.0.1">
+<page closed="false" id="Page@18534168:1494272205903">Main</page>
+<page closed="false" id="Page@23697126:1494272968254">Transfer</page>
+<page closed="false" id="Page@17022263:1494272975743">Log</page>
+</callflow>

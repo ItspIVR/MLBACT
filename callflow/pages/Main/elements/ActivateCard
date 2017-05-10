@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<web_service id="Element@15361677:1494351669733" name="ActivateCard" version="6.0.1">
+<config>
+<uri_or_file>File</uri_or_file>
+<wsdl_file_location>-1681639377</wsdl_file_location>
+<original_wsdl_file_location>C:\Sandbox\vzheng\DefaultBox\drive\C\workspace\IVR\MLBACTNew\wsdl\firstdata.wsdl</original_wsdl_file_location>
+<service_name>ExternalServerService</service_name>
+<service_namespace>http://esb.mls.com</service_namespace>
+<port_name>ExternalServerPort</port_name>
+<operation_name>cardActivation</operation_name>
+<input_parameter_configs>
+<part name="parameters">
+<nklviwnaspovnqwnfl1:cardActivation xmlns:nklviwnaspovnqwnfl1="http://esb.mls.com">
+<CreditCardNumber>{Data.Session.CardNumber}</CreditCardNumber>
+</nklviwnaspovnqwnfl1:cardActivation>
+</part>
+</input_parameter_configs>
+<output_parameter_configs store_response_xml="true">
+<queries>
+<part name="parameters">
+<query storein="element" varname="result">/cardActivationResponse/Result</query>
+</part>
+</queries>
+</output_parameter_configs>
+<requires_http_authentication>true</requires_http_authentication>
+<username>{Data.Session.USER}</username>
+<password>{Data.Session.PASSWORD}</password>
+<use_substitution_for_password>true</use_substitution_for_password>
+<use_proxy>false</use_proxy>
+<proxy_host/>
+<proxy_port/>
+<connect_timeout>8</connect_timeout>
+<local_events>
+<local_event>
+<name>error</name>
+<eventlist>java.lang.Exception</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</web_service>

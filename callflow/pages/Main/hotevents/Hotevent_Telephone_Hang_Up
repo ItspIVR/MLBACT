@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<hotevent id="Element@10559960:1494356396450" name="Hotevent_Telephone_Hang_Up" version="6.0.1">
+<config>
+<event name="telephone.disconnect.hangup">
+<has_exit_state/>
+</event>
+</config>
+</hotevent>

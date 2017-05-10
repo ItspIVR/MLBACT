@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<web_service id="Element@7470190:1494379114247" name="GetQueue" version="6.0.1">
+<config>
+<uri_or_file>File</uri_or_file>
+<wsdl_file_location>-1560703965</wsdl_file_location>
+<original_wsdl_file_location>C:\Users\vzheng\Desktop\generic.wsdl</original_wsdl_file_location>
+<service_name>InternalServerService</service_name>
+<service_namespace>http://esb.mls.com</service_namespace>
+<port_name>InternalServerPort</port_name>
+<operation_name>GetQueStatistics</operation_name>
+<input_parameter_configs>
+<part name="parameters">
+<nklviwnaspovnqwnfl1:GetQueStatistics xmlns:nklviwnaspovnqwnfl1="http://esb.mls.com">
+<SkillGroupId>{Data.Session.SkillGroupId}</SkillGroupId>
+</nklviwnaspovnqwnfl1:GetQueStatistics>
+</part>
+</input_parameter_configs>
+<output_parameter_configs store_response_xml="true">
+<queries>
+<part name="parameters">
+<query storein="element" varname="result">/GetQueStatisticsResponse/Result</query>
+<query storein="element" varname="customer">/GetQueStatisticsResponse/Numberofcalls</query>
+<query storein="element" varname="waitTime">/GetQueStatisticsResponse/AverageWaitingLength</query>
+<query storein="element" varname="numAgent">/GetQueStatisticsResponse/Numberofagent</query>
+</part>
+</queries>
+</output_parameter_configs>
+<requires_http_authentication>true</requires_http_authentication>
+<username>{Data.Session.USER}</username>
+<password>{Data.Session.PASSWORD}</password>
+<use_substitution_for_password>true</use_substitution_for_password>
+<use_proxy>false</use_proxy>
+<proxy_host/>
+<proxy_port/>
+<connect_timeout>8</connect_timeout>
+<local_events>
+<local_event>
+<name>error</name>
+<eventlist>java.lang.Exception</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</web_service>

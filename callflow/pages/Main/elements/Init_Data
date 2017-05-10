@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@31011597:1494334665436" name="Init_Data" version="6.0.1">
+<config>
+<dynamic base_config="true" type="Class">com.manulife.ivr.action.DynamicSetTimeStamp</dynamic>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+<session_data>
+<data create_when="Before" name="waitTime">1</data>
+<data create_when="Before" name="people">5</data>
+<data create_when="Before" name="isPrimary">N</data>
+<data create_when="Before" name="getAuth">N</data>
+<data create_when="Before" name="isActive">0</data>
+<data create_when="Before" name="longWaitMin">1</data>
+<data create_when="Before" name="resetResult">true</data>
+<data create_when="Before" name="isSecondValid">false</data>
+<data create_when="Before" name="activation_exit_code">001</data>
+<data create_when="Before" name="upsell_exit_code">002</data>
+</session_data>
+</config>
+</action_element>

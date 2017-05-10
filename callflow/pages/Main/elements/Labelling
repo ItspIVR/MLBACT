@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@16410231:1494334255601" name="Labelling" version="6.0.1">
+<config>
+<dynamic base_config="true" type="Class">com.itsp.cvp.wsdl.WSDLClient</dynamic>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+<session_data>
+<data create_when="Before" name="transactionStartDateTimeLabel">TransactionStartDateTime</data>
+<data create_when="Before" name="transactionEndDateTimeLabel">TransactionEndDateTime</data>
+<data create_when="Before" name="transactionIdLabel">TransactionId</data>
+<data create_when="Before" name="CallStatus">C</data>
+<data create_when="Before" name="statusLabel">Status</data>
+<data create_when="Before" name="errorCodeLabel">ErrorCode</data>
+<data create_when="Before" name="RequestXmlLabel">RequestXml</data>
+<data create_when="Before" name="ReturnXmlLabel">ReturnXml</data>
+<data create_when="Before" name="ErrorMsgLabel">ErrorMsg</data>
+<data create_when="Before" name="menuLocationLabel">MenuLocation</data>
+<data create_when="Before" name="menuUsageSelectedOption">SelectedOption</data>
+<data create_when="Before" name="menuUsageCallEndDateTime">CallEndDateTime</data>
+<data create_when="Before" name="menuUsageReasonCode">ReasonCode</data>
+<data create_when="Before" name="menuUsageCallStartDateTime">CallStartDateTime</data>
+<data create_when="Before" name="menuUsageMenuLabel">MenuLabel</data>
+<data create_when="Before" name="CDR">CDR</data>
+</session_data>
+</config>
+</action_element>

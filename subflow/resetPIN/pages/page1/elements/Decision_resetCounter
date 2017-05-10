@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@6884362:1494355827481" name="Decision_resetCounter" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Decision_resetCounter" default_exit_state="false">
+        <exit_state name="true" conjugate="and">
+            <number operator="greater">
+                <data>
+                    <element name="resetCounter" variable="count" />
+                </data>
+                <constant_number value="3" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

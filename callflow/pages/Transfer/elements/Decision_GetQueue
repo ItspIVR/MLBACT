@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@18607053:1494379114246" name="Decision_GetQueue" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Decision_GetQueue" default_exit_state="F">
+        <exit_state name="T" conjugate="and">
+            <boolean check_existence="no" value="true">
+                <data>
+                    <element name="GetQueue" variable="result" />
+                </data>
+            </boolean>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

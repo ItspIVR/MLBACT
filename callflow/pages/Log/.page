@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@17022263:1494272975743" name="Log" version="6.0.1">
+<element height="46" id="Element@8093182:1494272975743" name="Log" type="Page Entry" width="82" x="80" y="27">
+<exit_states>
+<exit_state name="next" target="Element@8735198:1494388257466"/>
+</exit_states>
+</element>
+<element height="46" id="Element@5868584:1494273958751" name="CVP Subdialog Return_01" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="183" x="312" y="322">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@8735198:1494388257466" name="IVR_Logs_Parameters" src="com.itsp.cvp.action.ItspCustomApplicationModifier" type="Action Element" width="161" x="224" y="27">
+<exit_states>
+<exit_state name="done" target="Element@5868584:1494273958751"/>
+</exit_states>
+</element>
+</page>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<web_service id="Element@27499873:1494355827480" name="Web Service_resetPIN" version="6.0.1">
+<config>
+<uri_or_file>File</uri_or_file>
+<wsdl_file_location>926369998</wsdl_file_location>
+<original_wsdl_file_location>C:\workspace\IVR\MLBACT\wsdl\firstdata.wsdl</original_wsdl_file_location>
+<service_name>ExternalServerService</service_name>
+<service_namespace>http://esb.mls.com</service_namespace>
+<port_name>ExternalServerPort</port_name>
+<operation_name>pinReset</operation_name>
+<input_parameter_configs>
+<part name="parameters">
+<nklviwnaspovnqwnfl1:pinReset xmlns:nklviwnaspovnqwnfl1="http://esb.mls.com">
+<PinBlock>{Data.Session.PINBlock}</PinBlock>
+<PresentationInstrumentIdentifier>{Data.Session.CardNumber}</PresentationInstrumentIdentifier>
+<PresentationInstrumentReplacementSequenceNumber>{Data.Session.seq}</PresentationInstrumentReplacementSequenceNumber>
+</nklviwnaspovnqwnfl1:pinReset>
+</part>
+</input_parameter_configs>
+<output_parameter_configs store_response_xml="true">
+<queries>
+<part name="parameters">
+<query storein="session" varname="resetResult">/pinResetResponse/Result</query>
+<query storein="element" varname="message">/pinResetResponse/Message</query>
+<query storein="element" varname="pinResetStatus">/pinResetResponse/PinResetStatus</query>
+</part>
+</queries>
+</output_parameter_configs>
+<requires_http_authentication>true</requires_http_authentication>
+<username>{Data.Session.USER}</username>
+<password>{Data.Session.PASSWORD}</password>
+<use_substitution_for_password>true</use_substitution_for_password>
+<use_proxy>false</use_proxy>
+<proxy_host/>
+<proxy_port/>
+<connect_timeout>8</connect_timeout>
+<local_events>
+<local_event>
+<name>error</name>
+<eventlist>java.lang.Exception</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</web_service>

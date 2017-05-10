@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@27097999:1494351894173" name="ActivateCard_Fail_Log" version="6.0.1">
+<config>
+<dynamic base_config="true" type="Class">com.itsp.cvp.action.ItspDynamicSetTimeStamp</dynamic>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+<element_data>
+<data create_when="Before" storable="false" name="transactionStartDateTime" type="string">{Data.Element.ActivateCard_Init_Params.TimeStamp}</data>
+<data create_when="After" storable="false" name="transactionEndDateTime" type="string">{Data.Element.ActivateCard_Fail_Log.TimeStamp}</data>
+<data create_when="Before" storable="false" name="transactionId" type="string">ActivateCard</data>
+<data create_when="Before" storable="false" name="Status" type="boolean">{Data.Session.isActive}</data>
+<data create_when="Before" storable="false" name="ErrorCode" type="int">-1</data>
+<data create_when="Before" storable="true" name="RequestXml" type="string">CardNumber={Data.Session.Log_CardNum}</data>
+<data create_when="Before" storable="true" name="ReturnXml" type="string">result={Data.Session.isActive}</data>
+<data create_when="After" storable="false" name="transactionLog" type="string">[{Data.Session.transactionStartDateTimeLabel}={Data.Element.ActivateCard_Fail_Log.transactionStartDateTime},{Data.Session.transactionEndDateTimeLabel}={Data.Element.ActivateCard_Fail_Log.transactionEndDateTime},{Data.Session.transactionIdLabel}={Data.Element.ActivateCard_Fail_Log.transactionId},{Data.Session.statusLabel}={Data.Element.ActivateCard_Fail_Log.Status},{Data.Session.errorCodeLabel}={Data.Element.ActivateCard_Fail_Log.ErrorCode},{Data.Session.RequestXmlLabel}={Data.Element.ActivateCard_Fail_Log.RequestXml},{Data.Session.ReturnXmlLabel}={Data.Element.ActivateCard_Fail_Log.ReturnXml},{Data.Session.ErrorMsgLabel}={Data.Element.ActivateCard_Fail_Log.ErrorMsg}]</data>
+<data create_when="Before" storable="false" name="ErrorMsg" type="string">{Data.Element.ActivateCard.message}</data>
+</element_data>
+<session_data>
+<data create_when="After" name="transactionLogs">{Data.Session.transactionLogs}{Data.Element.ActivateCard_Fail_Log.transactionLog}</data>
+<data create_when="Before" name="newAcc">true</data>
+<data create_when="Before" name="skillGroup">{Data.Session.lang_skillGroup}001</data>
+</session_data>
+</config>
+</action_element>

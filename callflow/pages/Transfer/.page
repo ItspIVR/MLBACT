@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@23697126:1494272968254" name="Transfer" version="6.0.1">
+<element height="46" id="Element@20043722:1494272968254" name="Transfer" type="Page Entry" width="93" x="300" y="30">
+<exit_states>
+<exit_state name="next" target="Element@33057758:1494379114246"/>
+</exit_states>
+</element>
+<element height="46" id="Element@31774822:1494273925038" name="Log" type="Page Connector" width="70" x="153" y="211">
+<page_connector target="Element@8093182:1494272975743">Log<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@33057758:1494379114246" name="SkillGroupGenerator" src="com.itsp.cvp.action.ItspCustomApplicationModifier" type="Action Element" width="156" x="304" y="198">
+<exit_states>
+<exit_state name="done" target="Element@7470190:1494379114247"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1445231:1494379114246" name="Decision_LongWait" type="Decision" width="151" x="300" y="408">
+<exit_states>
+<exit_state name="T" target="Element@30150445:1494379114246"/>
+<exit_state name="F" target="Element@31774822:1494273925038"/>
+</exit_states>
+</element>
+<element height="46" id="Element@30150445:1494379114246" name="longWaitAudio" src="com.itsp.cvp.action.ItspCustomMAudio" type="Voice Element" width="130" x="54" y="406">
+<exit_states>
+<exit_state name="done" target="Element@31774822:1494273925038"/>
+</exit_states>
+</element>
+<element height="46" id="Element@7470190:1494379114247" name="GetQueue" type="Web Service" width="131" x="310" y="282">
+<exit_states>
+<exit_state name="done" target="Element@18607053:1494379114246"/>
+<exit_state name="Java Exception-error" target="Element@31774822:1494273925038"/>
+</exit_states>
+</element>
+<element height="46" id="Element@18607053:1494379114246" name="Decision_GetQueue" type="Decision" width="153" x="299" y="343">
+<exit_states>
+<exit_state name="T" target="Element@1445231:1494379114246"/>
+<exit_state name="F" target="Element@31774822:1494273925038"/>
+</exit_states>
+</element>
+</page>

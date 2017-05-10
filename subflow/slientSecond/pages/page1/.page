@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@18410786:1481578261621" name="page1" version="6.0.1">
+<element height="46" id="Element@31:1481578261621" name="slientSecond" type="Subflow Start" width="117" x="230" y="30">
+<exit_states>
+<exit_state name="next" target="Element@19221410:1481578280699"/>
+</exit_states>
+</element>
+<element height="46" id="Element@25723519:1481578280699" name="silenceAudio" skipped="true" src="com.itsp.cvp.action.ItspCustomMAudio" type="Voice Element" width="118" x="229" y="214">
+<exit_states>
+<exit_state name="done" target="Element@19897377:1481578280699"/>
+</exit_states>
+</element>
+<element height="46" id="Element@19221410:1481578280699" name="silenceMenu" skipped="true" src="com.audium.server.voiceElement.menu.MFoundation2OptionMenu" type="Voice Element" width="151" x="213" y="118">
+<exit_states>
+<exit_state name="option1" target="Element@25723519:1481578280699"/>
+<exit_state name="option2" target="Element@25723519:1481578280699"/>
+<exit_state name="max_nomatch" target="Element@25723519:1481578280699"/>
+<exit_state name="max_noinput" target="Element@25723519:1481578280699"/>
+</exit_states>
+</element>
+<element height="46" id="Element@19897377:1481578280699" name="Subflow Return_01" type="Subflow Return" width="148" x="214" y="302"/>
+</page>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@18265383:1494355827481" name="Decision_resetStatus" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Decision_resetStatus" default_exit_state="false">
+        <exit_state name="true" conjugate="and">
+            <boolean check_existence="no" value="true">
+                <data>
+                    <session name="resetResult" />
+                </data>
+            </boolean>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

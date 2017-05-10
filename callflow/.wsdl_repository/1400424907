@@ -1,0 +1,458 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://esb.mls.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="InternalServerService" targetNamespace="http://esb.mls.com">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://esb.mls.com" elementFormDefault="unqualified" targetNamespace="http://esb.mls.com" version="1.0">
+
+  <xs:element name="Broadcast_Message" type="tns:Broadcast_Message"/>
+
+  <xs:element name="Broadcast_MessageResponse" type="tns:Broadcast_MessageResponse"/>
+
+  <xs:element name="GetQueStatistics" type="tns:GetQueStatistics"/>
+
+  <xs:element name="GetQueStatisticsResponse" type="tns:GetQueStatisticsResponse"/>
+
+  <xs:element name="IVR_Call_Summary" type="tns:IVR_Call_Summary"/>
+
+  <xs:element name="IVR_Call_SummaryResponse" type="tns:IVR_Call_SummaryResponse"/>
+
+  <xs:element name="Menu_Usage_Log" type="tns:Menu_Usage_Log"/>
+
+  <xs:element name="Menu_Usage_LogResponse" type="tns:Menu_Usage_LogResponse"/>
+
+  <xs:element name="SaveUpsaleCall" type="tns:SaveUpsaleCall"/>
+
+  <xs:element name="SaveUpsaleCallResponse" type="tns:SaveUpsaleCallResponse"/>
+
+  <xs:element name="Transaction_Log" type="tns:Transaction_Log"/>
+
+  <xs:element name="Transaction_LogResponse" type="tns:Transaction_LogResponse"/>
+
+  <xs:element name="afterHourLookup" type="tns:afterHourLookup"/>
+
+  <xs:element name="afterHourLookupResponse" type="tns:afterHourLookupResponse"/>
+
+  <xs:element name="aniLookup" type="tns:aniLookup"/>
+
+  <xs:element name="aniLookupResponse" type="tns:aniLookupResponse"/>
+
+  <xs:element name="workingHourLookup" type="tns:workingHourLookup"/>
+
+  <xs:element name="workingHourLookupResponse" type="tns:workingHourLookupResponse"/>
+
+  <xs:complexType name="SaveUpsaleCall">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ANI" type="xs:string"/>
+      <xs:element minOccurs="0" name="CallID" type="xs:string"/>
+      <xs:element minOccurs="0" name="FirstName" type="xs:string"/>
+      <xs:element minOccurs="0" name="LastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="LastFourDigitCardNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="Language" type="xs:string"/>
+      <xs:element minOccurs="0" name="Date" type="xs:string"/>
+      <xs:element minOccurs="0" name="IVR_Exit_menu" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SaveUpsaleCallResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="workingHourLookup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppID" type="xs:string"/>
+      <xs:element minOccurs="0" name="ProvinceCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="City" type="xs:string"/>
+      <xs:element minOccurs="0" name="EnterpriseName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="workingHourLookupResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Message" type="xs:string"/>
+      <xs:element minOccurs="0" name="Date" type="xs:string"/>
+      <xs:element minOccurs="0" name="Day" type="xs:string"/>
+      <xs:element minOccurs="0" name="StartTime" type="xs:string"/>
+      <xs:element minOccurs="0" name="EndTime" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Broadcast_Message">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Broadcast_Id" type="xs:string"/>
+      <xs:element minOccurs="0" name="Menu_Location" type="xs:string"/>
+      <xs:element minOccurs="0" name="DNIS" type="xs:string"/>
+      <xs:element minOccurs="0" name="Region" type="xs:string"/>
+      <xs:element minOccurs="0" name="Switch_ID" type="xs:string"/>
+      <xs:element minOccurs="0" name="Start_Broadcast" type="xs:string"/>
+      <xs:element minOccurs="0" name="End_Broadcast" type="xs:string"/>
+      <xs:element minOccurs="0" name="Must_Hear" type="xs:string"/>
+      <xs:element minOccurs="0" name="Broadcast_Message" type="xs:string"/>
+      <xs:element minOccurs="0" name="Hear_More" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Broadcast_MessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Transaction_Log">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Switch_ID" type="xs:string"/>
+      <xs:element minOccurs="0" name="Transaction_StartDateTime" type="xs:string"/>
+      <xs:element minOccurs="0" name="Transaction_EndDateTime" type="xs:string"/>
+      <xs:element minOccurs="0" name="CDR" type="xs:string"/>
+      <xs:element minOccurs="0" name="Duration" type="xs:string"/>
+      <xs:element minOccurs="0" name="Application_Id" type="xs:string"/>
+      <xs:element minOccurs="0" name="Transaction_Id" type="xs:string"/>
+      <xs:element minOccurs="0" name="Status" type="xs:string"/>
+      <xs:element minOccurs="0" name="Error_Code" type="xs:string"/>
+      <xs:element minOccurs="0" name="Request_XML" type="xs:string"/>
+      <xs:element minOccurs="0" name="Return_XML" type="xs:string"/>
+      <xs:element minOccurs="0" name="Error_MSG" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Transaction_LogResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetQueStatistics">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppID" type="xs:string"/>
+      <xs:element minOccurs="0" name="QueueName" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetQueStatisticsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Message" type="xs:string"/>
+      <xs:element minOccurs="0" name="Numberofcalls" type="xs:int"/>
+      <xs:element minOccurs="0" name="AverageWaitingLength" type="xs:int"/>
+      <xs:element minOccurs="0" name="Numberofagent " type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="IVR_Call_Summary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Switch_id" type="xs:string"/>
+      <xs:element minOccurs="0" name="CDR" type="xs:string"/>
+      <xs:element minOccurs="0" name="Call_StartDateTime" type="xs:string"/>
+      <xs:element minOccurs="0" name="Call_EndDateTime" type="xs:string"/>
+      <xs:element minOccurs="0" name="IVR_Port_ID" type="xs:string"/>
+      <xs:element minOccurs="0" name="DNIS" type="xs:string"/>
+      <xs:element minOccurs="0" name="ANI" type="xs:string"/>
+      <xs:element minOccurs="0" name="Caller_Language" type="xs:string"/>
+      <xs:element minOccurs="0" name="Region" type="xs:string"/>
+      <xs:element minOccurs="0" name="Source" type="xs:string"/>
+      <xs:element minOccurs="0" name="Status" type="xs:string"/>
+      <xs:element minOccurs="0" name="Call_Center_Destination" type="xs:string"/>
+      <xs:element minOccurs="0" name="SkillGroup" type="xs:string"/>
+      <xs:element minOccurs="0" name="Transfer_Destination" type="xs:string"/>
+      <xs:element minOccurs="0" name="Last_Location" type="xs:string"/>
+      <xs:element minOccurs="0" name="Account_Number" type="xs:string"/>
+      <xs:element minOccurs="0" name="UCID" type="xs:string"/>
+      <xs:element minOccurs="0" name="Company_ID" type="xs:string"/>
+      <xs:element minOccurs="0" name="Business_Unit" type="xs:string"/>
+      <xs:element minOccurs="0" name="Application_ID" type="xs:string"/>
+      <xs:element minOccurs="0" name="Product_Line" type="xs:string"/>
+      <xs:element minOccurs="0" name="Spare_1" type="xs:string"/>
+      <xs:element minOccurs="0" name="Spare_2" type="xs:string"/>
+      <xs:element minOccurs="0" name="Spare_3" type="xs:string"/>
+      <xs:element minOccurs="0" name="Spare_4" type="xs:string"/>
+      <xs:element minOccurs="0" name="Spare_5" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="IVR_Call_SummaryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Menu_Usage_Log">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SwitchId" type="xs:string"/>
+      <xs:element minOccurs="0" name="Call_StartDateTime" type="xs:string"/>
+      <xs:element minOccurs="0" name="Call_EndDateTime" type="xs:string"/>
+      <xs:element minOccurs="0" name="CDR" type="xs:string"/>
+      <xs:element minOccurs="0" name="Application_Id" type="xs:string"/>
+      <xs:element minOccurs="0" name="Source" type="xs:string"/>
+      <xs:element minOccurs="0" name="Region" type="xs:string"/>
+      <xs:element minOccurs="0" name="Menu_Label" type="xs:string"/>
+      <xs:element minOccurs="0" name="Option_Selected" type="xs:string"/>
+      <xs:element minOccurs="0" name="Reason_Code" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Menu_Usage_LogResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="afterHourLookup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppID" type="xs:string"/>
+      <xs:element minOccurs="0" name="ProvinceId" type="xs:string"/>
+      <xs:element minOccurs="0" name="RegionId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="afterHourLookupResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Message" type="xs:string"/>
+      <xs:element minOccurs="0" name="HolidayHourFlag" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="aniLookup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppID" type="xs:string"/>
+      <xs:element minOccurs="0" name="ANI" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="aniLookupResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Message" type="xs:string"/>
+      <xs:element minOccurs="0" name="ProvinceID" type="xs:string"/>
+      <xs:element minOccurs="0" name="RegionID" type="xs:string"/>
+      <xs:element minOccurs="0" name="LanguagePreferences" type="xs:string"/>
+      <xs:element minOccurs="0" name="BroadCastMsg" type="xs:string"/>
+      <xs:element minOccurs="0" name="MaxWaitTime" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="SaveUpsaleCall">
+    <wsdl:part element="tns:SaveUpsaleCall" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="workingHourLookupResponse">
+    <wsdl:part element="tns:workingHourLookupResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Broadcast_MessageResponse">
+    <wsdl:part element="tns:Broadcast_MessageResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Broadcast_Message">
+    <wsdl:part element="tns:Broadcast_Message" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Transaction_LogResponse">
+    <wsdl:part element="tns:Transaction_LogResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IVR_Call_SummaryResponse">
+    <wsdl:part element="tns:IVR_Call_SummaryResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="afterHourLookup">
+    <wsdl:part element="tns:afterHourLookup" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="aniLookup">
+    <wsdl:part element="tns:aniLookup" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="workingHourLookup">
+    <wsdl:part element="tns:workingHourLookup" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetQueStatisticsResponse">
+    <wsdl:part element="tns:GetQueStatisticsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="aniLookupResponse">
+    <wsdl:part element="tns:aniLookupResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SaveUpsaleCallResponse">
+    <wsdl:part element="tns:SaveUpsaleCallResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Transaction_Log">
+    <wsdl:part element="tns:Transaction_Log" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetQueStatistics">
+    <wsdl:part element="tns:GetQueStatistics" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IVR_Call_Summary">
+    <wsdl:part element="tns:IVR_Call_Summary" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Menu_Usage_Log">
+    <wsdl:part element="tns:Menu_Usage_Log" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Menu_Usage_LogResponse">
+    <wsdl:part element="tns:Menu_Usage_LogResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="afterHourLookupResponse">
+    <wsdl:part element="tns:afterHourLookupResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="InternalServer">
+    <wsdl:operation name="SaveUpsaleCall">
+      <wsdl:input message="tns:SaveUpsaleCall" name="SaveUpsaleCall">
+    </wsdl:input>
+      <wsdl:output message="tns:SaveUpsaleCallResponse" name="SaveUpsaleCallResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="workingHourLookup">
+      <wsdl:input message="tns:workingHourLookup" name="workingHourLookup">
+    </wsdl:input>
+      <wsdl:output message="tns:workingHourLookupResponse" name="workingHourLookupResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Broadcast_Message">
+      <wsdl:input message="tns:Broadcast_Message" name="Broadcast_Message">
+    </wsdl:input>
+      <wsdl:output message="tns:Broadcast_MessageResponse" name="Broadcast_MessageResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Transaction_Log">
+      <wsdl:input message="tns:Transaction_Log" name="Transaction_Log">
+    </wsdl:input>
+      <wsdl:output message="tns:Transaction_LogResponse" name="Transaction_LogResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQueStatistics">
+      <wsdl:input message="tns:GetQueStatistics" name="GetQueStatistics">
+    </wsdl:input>
+      <wsdl:output message="tns:GetQueStatisticsResponse" name="GetQueStatisticsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IVR_Call_Summary">
+      <wsdl:input message="tns:IVR_Call_Summary" name="IVR_Call_Summary">
+    </wsdl:input>
+      <wsdl:output message="tns:IVR_Call_SummaryResponse" name="IVR_Call_SummaryResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Menu_Usage_Log">
+      <wsdl:input message="tns:Menu_Usage_Log" name="Menu_Usage_Log">
+    </wsdl:input>
+      <wsdl:output message="tns:Menu_Usage_LogResponse" name="Menu_Usage_LogResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="afterHourLookup">
+      <wsdl:input message="tns:afterHourLookup" name="afterHourLookup">
+    </wsdl:input>
+      <wsdl:output message="tns:afterHourLookupResponse" name="afterHourLookupResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aniLookup">
+      <wsdl:input message="tns:aniLookup" name="aniLookup">
+    </wsdl:input>
+      <wsdl:output message="tns:aniLookupResponse" name="aniLookupResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="InternalServerServiceSoapBinding" type="tns:InternalServer">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="SaveUpsaleCall">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="SaveUpsaleCall">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="SaveUpsaleCallResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="workingHourLookup">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="workingHourLookup">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="workingHourLookupResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Broadcast_Message">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="Broadcast_Message">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="Broadcast_MessageResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Transaction_Log">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="Transaction_Log">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="Transaction_LogResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQueStatistics">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GetQueStatistics">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetQueStatisticsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IVR_Call_Summary">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="IVR_Call_Summary">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="IVR_Call_SummaryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Menu_Usage_Log">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="Menu_Usage_Log">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="Menu_Usage_LogResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="afterHourLookup">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="afterHourLookup">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="afterHourLookupResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aniLookup">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="aniLookup">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="aniLookupResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InternalServerService">
+    <wsdl:port binding="tns:InternalServerServiceSoapBinding" name="InternalServerPort">
+      <soap:address location="http://10.77.48.20:8999/manulife/generic"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

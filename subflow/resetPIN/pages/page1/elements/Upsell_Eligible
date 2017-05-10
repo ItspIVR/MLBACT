@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@15423790:1494355827481" name="Upsell_Eligible" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Upsell_Eligible" default_exit_state="F">
+        <exit_state name="T" conjugate="and">
+            <boolean check_existence="no" value="true">
+                <data>
+                    <session name="isEligibility" />
+                </data>
+            </boolean>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

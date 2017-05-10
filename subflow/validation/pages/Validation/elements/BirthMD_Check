@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@11442040:1494350363340" name="BirthMD_Check" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="BirthMD_Check" default_exit_state="F">
+        <exit_state name="T" conjugate="and">
+            <number operator="equal">
+                <data>
+                    <element name="BirthDateMonthCounter" variable="count" />
+                </data>
+                <constant_number value="2" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

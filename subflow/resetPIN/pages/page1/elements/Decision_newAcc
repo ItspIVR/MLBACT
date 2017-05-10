@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@23633738:1494355701727" name="Decision_newAcc" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Decision_newAcc" default_exit_state="F">
+        <exit_state name="T" conjugate="and">
+            <boolean check_existence="no" value="true">
+                <data>
+                    <session name="newAcc" />
+                </data>
+            </boolean>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

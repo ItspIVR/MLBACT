@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@9546696:1494334971369" name="BilingualGreeting" version="6.0.1">
+<config>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="MLA_Greeting_En.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="MLA_Greeting_Fr.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+<element_data>
+<data create_when="Before" name="menuLabel" storable="false" type="String">BilingualGreeting</data>
+</element_data>
+<session_data>
+<data create_when="After" name="upsellDate">{Data.Element.BilingualGreeting.StartTime}</data>
+<data create_when="After" name="menuUsageLog">{Data.Element.BilingualGreeting.menuUsage}</data>
+</session_data>
+</config>
+</voice_element>

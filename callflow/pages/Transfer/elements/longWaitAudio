@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@30150445:1494379114246" name="longWaitAudio" version="6.0.1">
+<config>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="MLA_Thereis_En.wav"><![CDATA[There is ]]></static>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{Data.Element.GetQueue.customer}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">MLA_SayitSmart_En/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 5" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="MLA_Customer_En.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 4" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{Data.Element.GetQueue.waitTime}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">MLA_SayitSmart_En/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="MLA_Minutes_En.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+<audio language="fr-CA">
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="MLA_Thereis_Fr.wav"><![CDATA[There is ]]></static>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{Data.Element.GetQueue.customer}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">MLA_SayitSmart_Fr/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 5" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="MLA_Customer_Fr.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 4" type="say_it_smart">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<say_it_smart input_format="standard" output_format="standard" type="number">{Data.Element.GetQueue.waitTime}</say_it_smart>
+<recorded_audio default_audio_path="true" fileset="standard" type="wav">MLA_SayitSmart_Fr/</recorded_audio>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 3" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="MLA_Minutes_Fr.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

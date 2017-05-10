@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@26432166:1494335819234" name="AreaCodeLookUp_Fail_Log" version="6.0.1">
+<config>
+<dynamic base_config="true" type="Class">com.itsp.cvp.action.ItspDynamicSetTimeStamp</dynamic>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+<element_data>
+<data create_when="Before" name="transactionStartDateTime" storable="false" type="String">{Data.Element.AniLookup_Init_Parameters.TimeStamp}</data>
+<data create_when="After" name="transactionEndDateTime" storable="false" type="String">{Data.Element.AreaCodeLookUp_Fail_Log.TimeStamp}</data>
+<data create_when="Before" name="transactionId" storable="false" type="String">AniLookUp</data>
+<data create_when="Before" name="Status" storable="false" type="Boolean">false</data>
+<data create_when="Before" name="ErrorCode" storable="false" type="Integer">-1</data>
+<data create_when="Before" name="RequestXml" storable="false" type="String">appId={Data.Session.AppID}; ANI={CallData.ANI}</data>
+<data create_when="Before" name="ReturnXml" storable="false" type="String"> </data>
+<data create_when="After" name="transactionLog" storable="false" type="String">[{Data.Session.transactionStartDateTimeLabel}={Data.Element.AreaCodeLookUp_Fail_Log.transactionStartDateTime},{Data.Session.transactionEndDateTimeLabel}={Data.Element.AreaCodeLookUp_Fail_Log.transactionEndDateTime},{Data.Session.transactionIdLabel}={Data.Element.AreaCodeLookUp_Fail_Log.transactionId},{Data.Session.statusLabel}={Data.Element.AreaCodeLookUp_Fail_Log.Status},{Data.Session.errorCodeLabel}={Data.Element.AreaCodeLookUp_Fail_Log.ErrorCode},{Data.Session.RequestXmlLabel}={Data.Element.AreaCodeLookUp_Fail_Log.RequestXml},{Data.Session.ReturnXmlLabel}={Data.Element.AreaCodeLookUp_Fail_Log.ReturnXml},{Data.Session.ErrorMsgLabel}={Data.Element.AreaCodeLookUp_Fail_Log.ErrorMsg}]</data>
+<data create_when="Before" name="ErrorMsg" storable="false" type="String">{Data.Session.lastException.message}</data>
+</element_data>
+<session_data>
+<data create_when="After" name="transactionLogs">{Data.Element.AreaCodeLookUp_Fail_Log.transactionLog}</data>
+<data create_when="Before" name="regionID">Toronto</data>
+<data create_when="Before" name="broacastMsg">Loblaws_BroadcastMsg1:::</data>
+<data create_when="Before" name="provinceID">Ontario </data>
+</session_data>
+</config>
+</action_element>

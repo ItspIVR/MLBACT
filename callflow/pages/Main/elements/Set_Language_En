@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@32182849:1494336909133" name="Set_Language_En" version="6.0.1">
+<config>
+<settings>
+<setting name="maintainer"/>
+<setting name="language">en-CA</setting>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+<session_data>
+<data create_when="Before" name="log_Lang">En</data>
+<data create_when="Before" name="lang_skillGroup">1</data>
+</session_data>
+</config>
+</action_element>

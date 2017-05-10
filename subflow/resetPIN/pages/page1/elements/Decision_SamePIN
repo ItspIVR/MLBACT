@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@21200458:1494355827481" name="Decision_SamePIN" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Decision_SamePIN" default_exit_state="false">
+        <exit_state name="true" conjugate="and">
+            <number operator="equal">
+                <data>
+                    <element name="InputPIN" variable="value" />
+                </data>
+                <data>
+                    <element name="InputPINAgain" variable="value" />
+                </data>
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

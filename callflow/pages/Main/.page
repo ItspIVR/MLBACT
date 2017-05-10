@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@18534168:1494272205903" name="Main" version="6.0.1">
+<element height="46" id="Element@12413068:1494272205903" name="Start Of Call" start_of_call="true" type="Page Entry" width="113" x="262" y="4">
+<exit_states>
+<exit_state name="next" target="Element@29951870:1494272875442"/>
+</exit_states>
+</element>
+<element height="46" id="Element@29951870:1494272875442" name="Beginning call" src="com.audium.server.voiceElement.internal.CiscoSubdialogStartElement" type="Subdialog Start" width="125" x="256" y="73">
+<exit_states>
+<exit_state name="done" target="Element@6386359:1494273067017"/>
+</exit_states>
+</element>
+<element height="46" id="Element@6386359:1494273067017" name="Define_CONSTANT" src="com.itsp.cvp.action.ItspCustomApplicationModifier" type="Action Element" width="152" x="418" y="10">
+<exit_states>
+<exit_state name="done" target="Element@16410231:1494334255601"/>
+</exit_states>
+</element>
+<element height="46" id="Element@16410231:1494334255601" name="Labelling" src="com.itsp.cvp.action.ItspCustomApplicationModifier" type="Action Element" width="98" x="604" y="13">
+<exit_states>
+<exit_state name="done" target="Element@31011597:1494334665436"/>
+</exit_states>
+</element>
+<element height="46" id="Element@28935641:1494334311503" name="Transfer" type="Page Connector" width="113" x="899" y="1141">
+<page_connector target="Element@20043722:1494272968254">Transfer<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@31011597:1494334665436" name="Init_Data" src="com.itsp.cvp.action.ItspCustomApplicationModifier" type="Action Element" width="96" x="446" y="73">
+<exit_states>
+<exit_state name="done" target="Element@9546696:1494334971369"/>
+</exit_states>
+</element>
+<element height="46" id="Element@9546696:1494334971369" name="BilingualGreeting" src="com.manulife.ivr.action.CustomMAudio" type="Voice Element" width="141" x="423" y="146">
+<exit_states>
+<exit_state name="done" target="Element@17450211:1494335381637"/>
+</exit_states>
+</element>
+<element height="46" id="Element@17450211:1494335381637" name="AniLookup_Init_Parameters" src="com.itsp.cvp.action.ItspCustomApplicationModifier" type="Action Element" width="200" x="393" y="217">
+<exit_states>
+<exit_state name="done" target="Element@9213730:1494335448449"/>
+</exit_states>
+</element>
+<element height="46" id="Element@9213730:1494335448449" name="AreaCodeLookup" type="Web Service" width="142" x="422" y="301">
+<exit_states>
+<exit_state name="done" target="Element@28245763:1494336304076"/>
+<exit_state name="Java Exception-error" target="Element@26432166:1494335819234">
+<bendpoint>
+<dim1 x="235" y="0"/>
+<dim2 x="-1" y="-85"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@26432166:1494335819234" name="AreaCodeLookUp_Fail_Log" src="com.itsp.cvp.action.ItspCustomApplicationModifier" type="Action Element" width="202" x="628" y="386">
+<exit_states>
+<exit_state name="done" target="Element@12572237:1494336875065"/>
+</exit_states>
+</element>
+<element height="46" id="Element@28245763:1494336304076" name="Decision_AniLookup_Result" type="Decision" width="195" x="395" y="386">
+<exit_states>
+<exit_state name="T" target="Element@20180191:1494336396805"/>
+<exit_state name="F" target="Element@26432166:1494335819234"/>
+</exit_states>
+</element>
+<element height="46" id="Element@20180191:1494336396805" name="AreaCodeLookUp_Log" src="com.itsp.cvp.action.ItspCustomApplicationModifier" type="Action Element" width="168" x="191" y="386">
+<exit_states>
+<exit_state name="done" target="Element@12572237:1494336875065"/>
+</exit_states>
+</element>
+<element height="46" id="Element@12572237:1494336875065" name="Language_Option_Menu" src="com.itsp.cvp.action.ItspCustomMFoundation2OptionMenu" type="Voice Element" width="190" x="405" y="470">
+<exit_states>
+<exit_state name="option1" target="Element@32182849:1494336909133"/>
+<exit_state name="option2" target="Element@13851381:1494336911213"/>
+<exit_state name="max_nomatch" target="Element@32182849:1494336909133">
+<bendpoint>
+<dim1 x="-218" y="-31"/>
+<dim2 x="0" y="-59"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_noinput" target="Element@32182849:1494336909133">
+<bendpoint>
+<dim1 x="-218" y="83"/>
+<dim2 x="0" y="55"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@32182849:1494336909133" name="Set_Language_En" src="com.itsp.cvp.action.ItspCustomApplicationModifier" type="Action Element" width="141" x="204" y="498">
+<exit_states>
+<exit_state name="done" target="Element@25305579:1494337301666">
+<bendpoint>
+<dim1 x="-110" y="-4"/>
+<dim2 x="-329" y="-67"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-110" y="62"/>
+<dim2 x="-329" y="-1"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@13851381:1494336911213" name="Set_Language_Fr" src="com.itsp.cvp.action.ItspCustomApplicationModifier" type="Action Element" width="138" x="660" y="498">
+<exit_states>
+<exit_state name="done" target="Element@25305579:1494337301666"/>
+</exit_states>
+</element>
+<element height="46" id="Element@25305579:1494337301666" name="validation" type="Subflow Call" width="102" x="442" y="561">
+<subflow_call subflow_name="validation" target="Element@31:1494337304487">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@32929163:1494351360703"/>
+</exit_states>
+</element>
+<element height="46" id="Element@32929163:1494351360703" name="Decision_getAuth" type="Decision" width="143" x="421" y="624">
+<exit_states>
+<exit_state name="T" target="Element@2851752:1494351410448"/>
+<exit_state name="F" target="Element@4533858:1494380793326"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2851752:1494351410448" name="Decision_isActive" type="Decision" width="141" x="422" y="696">
+<exit_states>
+<exit_state name="T" target="Element@24167162:1494355650612">
+<bendpoint>
+<dim1 x="-359" y="403"/>
+<dim2 x="-356" y="-33"/>
+</bendpoint>
+</exit_state>
+<exit_state name="F" target="Element@4168618:1494351586906"/>
+</exit_states>
+</element>
+<element height="46" id="Element@11884692:1494351479723" name="Transfer" type="Page Connector" width="113" x="231" y="696">
+<page_connector target="Element@20043722:1494272968254">Transfer<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@4168618:1494351586906" name="ActivateAudio" src="com.itsp.cvp.action.ItspCustomMAudio" type="Voice Element" width="125" x="430" y="776">
+<exit_states>
+<exit_state name="done" target="Element@23914835:1494351678271"/>
+</exit_states>
+</element>
+<element height="46" id="Element@15361677:1494351669733" name="ActivateCard" type="Web Service" width="131" x="426" y="911">
+<exit_states>
+<exit_state name="done" target="Element@10168971:1494351914611"/>
+<exit_state name="Java Exception-error" target="Element@27097999:1494351894173">
+<bendpoint>
+<dim1 x="209" y="0"/>
+<dim2 x="-1" y="-83"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@23914835:1494351678271" name="ActivateCard_Init_Params" src="com.itsp.cvp.action.ItspCustomApplicationModifier" type="Action Element" width="204" x="390" y="838">
+<exit_states>
+<exit_state name="done" target="Element@15361677:1494351669733"/>
+</exit_states>
+</element>
+<element height="46" id="Element@14371860:1494351864910" name="ActivateCard_Log" src="com.itsp.cvp.action.ItspCustomApplicationModifier" type="Action Element" width="143" x="242" y="994">
+<exit_states>
+<exit_state name="done" target="Element@8579979:1494355315949"/>
+</exit_states>
+</element>
+<element height="46" id="Element@27097999:1494351894173" name="ActivateCard_Fail_Log" src="com.itsp.cvp.action.ItspCustomApplicationModifier" type="Action Element" width="166" x="618" y="994">
+<exit_states>
+<exit_state name="done" target="Element@3591269:1494355472255"/>
+</exit_states>
+</element>
+<element height="46" id="Element@10168971:1494351914611" name="Decision_ActivateCard" type="Decision" width="168" x="407" y="994">
+<exit_states>
+<exit_state name="T" target="Element@14371860:1494351864910"/>
+<exit_state name="F" target="Element@27097999:1494351894173"/>
+</exit_states>
+</element>
+<element height="47" id="Element@8579979:1494355315949" name="ActivateSuccess" src="com.itsp.cvp.action.ItspCustomMAudio" type="Voice Element" width="140" x="420" y="1061">
+<exit_states>
+<exit_state name="done" target="Element@24167162:1494355650612"/>
+</exit_states>
+</element>
+<element height="47" id="Element@3591269:1494355472255" name="ActivationFail" src="com.itsp.cvp.action.ItspCustomMAudio" type="Voice Element" width="125" x="833" y="994">
+<exit_states>
+<exit_state name="done" target="Element@28935641:1494334311503"/>
+</exit_states>
+</element>
+<element height="46" id="Element@24167162:1494355650612" name="PINReset" type="Subflow Call" width="97" x="441" y="1132">
+<subflow_call subflow_name="resetPIN" target="Element@31:1494355693159">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@28978126:1494356139626"/>
+</exit_states>
+</element>
+<element height="47" id="Element@28978126:1494356139626" name="Decision_pinReset" type="Decision" width="154" x="412" y="1197">
+<exit_states>
+<exit_state name="Success" target="Element@15438828:1494356396450"/>
+<exit_state name="Agent" target="Element@3171407:1494356396450"/>
+<exit_state name="NUS" target="Element@3963337:1494356396450">
+<bendpoint>
+<dim1 x="159" y="0"/>
+<dim2 x="160" y="-148"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="159" y="147"/>
+<dim2 x="160" y="-1"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="47" id="Element@10559960:1494356396450" name="Hotevent_Telephone_Hang_Up" type="Hotevent" width="226" x="376" y="1531">
+<exit_states>
+<exit_state name="goto" target="Element@11860893:1494356396450"/>
+</exit_states>
+</element>
+<element height="47" id="Element@3963337:1494356396450" name="Play_thanks_and_goodbye" src="com.itsp.cvp.action.ItspCustomMAudio" type="Voice Element" width="201" x="388" y="1345">
+<exit_states>
+<exit_state name="done" target="Element@11860893:1494356396450"/>
+</exit_states>
+</element>
+<element height="47" id="Element@15438828:1494356396450" name="Decision_Upsale_Eligibility" type="Decision" width="200" x="389" y="1276">
+<exit_states>
+<exit_state name="true" target="Element@5794993:1494356396449"/>
+<exit_state name="false" target="Element@5237815:1494362334452"/>
+</exit_states>
+</element>
+<element height="47" id="Element@3171407:1494356396450" name="resetStatus" src="com.itsp.cvp.action.ItspCustomApplicationModifier" type="Action Element" width="114" x="209" y="1207">
+<exit_states>
+<exit_state name="done" target="Element@17416002:1494356396450"/>
+</exit_states>
+</element>
+<element height="47" id="Element@5794993:1494356396449" name="upSell" src="com.itsp.cvp.action.ItspCustomApplicationModifier" type="Action Element" width="85" x="222" y="1276">
+<exit_states>
+<exit_state name="done" target="Element@25207395:1494361750312"/>
+</exit_states>
+</element>
+<element height="47" id="Element@31431989:1494356396450" name="Log" type="Page Connector" width="75" x="647" y="1475">
+<page_connector target="Element@8093182:1494272975743">Log<config/>
+</page_connector>
+</element>
+<element height="47" id="Element@11860893:1494356396450" name="Modifier_ExitState_N" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="169" x="404" y="1418">
+<exit_states>
+<exit_state name="done" target="Element@31431989:1494356396450">
+<bendpoint>
+<dim1 x="74" y="56"/>
+<dim2 x="-131" y="-1"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="47" id="Element@32715794:1494356396450" name="Hotevent_Call_Hang_Up" type="Hotevent" width="186" x="175" y="1417">
+<exit_states>
+<exit_state name="goto" target="Element@11860893:1494356396450"/>
+</exit_states>
+</element>
+<element height="47" id="Element@17416002:1494356396450" name="Transfer" type="Page Connector" width="98" x="54" y="1207">
+<page_connector target="Element@20043722:1494272968254">Transfer<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@25207395:1494361750312" name="log_SaveUpSell" type="Web Service" width="131" x="39" y="1276">
+<exit_states>
+<exit_state name="done" target="Element@17416002:1494356396450"/>
+<exit_state name="Java Exception-error" target="Element@17416002:1494356396450">
+<bendpoint>
+<dim1 x="-97" y="-9"/>
+<dim2 x="-96" y="60"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@5237815:1494362334452" name="EndCallMenu" src="com.itsp.cvp.action.ItspCustomMFoundation2OptionMenu" type="Voice Element" width="121" x="200" y="1341">
+<exit_states>
+<exit_state name="option1" target="Element@3963337:1494356396450"/>
+<exit_state name="option2" target="Element@3171407:1494356396450"/>
+<exit_state name="max_nomatch" target="Element@3963337:1494356396450"/>
+<exit_state name="max_noinput" target="Element@3963337:1494356396450"/>
+</exit_states>
+</element>
+<element height="46" id="Element@4533858:1494380793326" name="ValidationFail" src="com.itsp.cvp.action.ItspCustomApplicationModifier" type="Action Element" width="121" x="227" y="624">
+<exit_states>
+<exit_state name="done" target="Element@11884692:1494351479723"/>
+</exit_states>
+</element>
+</page>

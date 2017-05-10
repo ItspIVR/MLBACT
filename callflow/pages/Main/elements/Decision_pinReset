@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@28978126:1494356139626" name="Decision_pinReset" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Decision_pinReset">
+        <exit_state name="Success" conjugate="or">
+            <string operator="equal">
+                <data>
+                    <session name="resetStatus" />
+                </data>
+                <constant_string value="Success" />
+            </string>
+            <string operator="equal">
+                <data>
+                    <session name="resetStatus" />
+                </data>
+                <constant_string value="upsell" />
+            </string>
+        </exit_state>
+        <exit_state name="Agent" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="resetStatus" />
+                </data>
+                <constant_string value="Agent" />
+            </string>
+        </exit_state>
+        <exit_state name="NUS" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="resetStatus" />
+                </data>
+                <constant_string value="NUS" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>
