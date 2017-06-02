@@ -12,7 +12,7 @@
 <part name="parameters">
 <nklviwnaspovnqwnfl1:doAuthenticationCheckCard xmlns:nklviwnaspovnqwnfl1="http://esb.mls.com">
 <CreditCardNumber>{Data.Element.Card_Number_Enter.value}</CreditCardNumber>
-<Ani>6478617036</Ani>
+<Ani>{CallData.ANI}</Ani>
 <CVV>{Data.Element.CVV_Enter.value}</CVV>
 </nklviwnaspovnqwnfl1:doAuthenticationCheckCard>
 </part>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@19434867:1494447541903" name="Transaction_Backup_Action" version="6.0.1">
+<config>
+<settings>
+<setting name="filePath">C:\Temp\manulifelog\</setting>
+<setting name="fileName">TransactionLogs.cvs</setting>
+<setting name="logRecordType">Transaction</setting>
+<setting name="logRecords"> {Data.Session.transactionLogs}</setting>
+</settings>
+<element_data>
+<data create_when="Before" name="message" storable="true" type="String">{Data.Element.Transaction_Logs_Web Services.message}</data>
+</element_data>
+</config>
+</action_element>

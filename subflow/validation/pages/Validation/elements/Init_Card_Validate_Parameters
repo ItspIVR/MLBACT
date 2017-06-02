@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@22516380:1494341724748" name="Init_Card_Validate_Parameters" version="6.0.1">
+<config>
+<dynamic base_config="true" type="Class">com.manulife.ivr.action.DynamicSetTimeStamp</dynamic>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+</config>
+</action_element>

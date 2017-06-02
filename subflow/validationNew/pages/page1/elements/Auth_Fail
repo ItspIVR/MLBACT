@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<action_element id="Element@27403451:1494342341962" name="CardValidate_Fail_Log" version="6.0.1">
+<action_element id="Element@3631986:1496089976758" name="Auth_Fail" version="6.0.1">
 <config>
 <settings>
 <setting name="maintainer"/>
@@ -8,5 +8,8 @@
 <setting name="default_audio_path"/>
 <setting name="remove_session_data"/>
 </settings>
+<session_data>
+<data create_when="Before" name="getAuth">N</data>
+</session_data>
 </config>
 </action_element>

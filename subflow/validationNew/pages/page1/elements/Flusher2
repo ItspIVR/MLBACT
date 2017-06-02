@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@6664197:1496089976758" name="Flusher2" version="6.0.1">
+<subflow_call subflow_name="slientSecond" target="Element@31:1493738569341">
+<config/>
+</subflow_call>
+</connector>

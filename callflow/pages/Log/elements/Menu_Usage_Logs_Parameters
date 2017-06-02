@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@27073641:1494447660840" name="Menu_Usage_Logs_Parameters" version="6.0.1">
+<config>
+<dynamic base_config="true" type="Class">com.itsp.cvp.action.ItspSetLogsParameters</dynamic>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+<element_data>
+<data create_when="Before" name="logRecordType" storable="false" type="String">MenuUsage</data>
+<data create_when="Before" name="logRecords" storable="false" type="String">{Data.Session.menuUsageLog}</data>
+</element_data>
+</config>
+</action_element>

@@ -20,6 +20,7 @@
 <data create_when="Before" name="isSecondValid">false</data>
 <data create_when="Before" name="activation_exit_code">001</data>
 <data create_when="Before" name="upsell_exit_code">002</data>
+<data create_when="Before" name="exitState">skillGroup</data>
 </session_data>
 </config>
 </action_element>

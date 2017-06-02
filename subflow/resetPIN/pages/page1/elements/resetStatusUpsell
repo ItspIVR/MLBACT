@@ -9,7 +9,7 @@
 <setting name="remove_session_data"/>
 </settings>
 <session_data>
-<data create_when="Before" name="resetStatus">upsell</data>
+<data create_when="Before" name="resetStatus">Agent</data>
 </session_data>
 </config>
 </action_element>

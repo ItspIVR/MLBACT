@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<web_service id="Element@11271792:1496089976758" name="Card_Validation" version="6.0.1">
+<config>
+<uri_or_file>File</uri_or_file>
+<wsdl_file_location>-1840573369</wsdl_file_location>
+<original_wsdl_file_location>E:\Manulife\Product\ManulifeIVR\wsdl\firstdata.wsdl</original_wsdl_file_location>
+<service_name>ExternalServerService</service_name>
+<service_namespace>http://esb.mls.com</service_namespace>
+<port_name>ExternalServerPort</port_name>
+<operation_name>doAuthenticationCheckCardCVV</operation_name>
+<input_parameter_configs>
+<part name="parameters">
+<nklviwnaspovnqwnfl1:doAuthenticationCheckCardCVV xmlns:nklviwnaspovnqwnfl1="http://esb.mls.com">
+<CreditCardNumber>{Data.Element.Card_Number_Enter.value}</CreditCardNumber>
+<CVV>{Data.Element.CVV_Enter.value}</CVV>
+</nklviwnaspovnqwnfl1:doAuthenticationCheckCardCVV>
+</part>
+</input_parameter_configs>
+<output_parameter_configs store_response_xml="true">
+<queries>
+<part name="parameters">
+<query storein="element" varname="result">/doAuthenticationCheckCardCVVResponse/Result</query>
+<query storein="element" varname="message">/doAuthenticationCheckCardCVVResponse/Message</query>
+</part>
+</queries>
+</output_parameter_configs>
+<requires_http_authentication>true</requires_http_authentication>
+<username>{Data.Session.USER}</username>
+<password>{Data.Session.PASSWORD}</password>
+<use_substitution_for_password>true</use_substitution_for_password>
+<use_proxy>false</use_proxy>
+<proxy_host/>
+<proxy_port/>
+<connect_timeout>8</connect_timeout>
+<local_events>
+<local_event>
+<name>error</name>
+<eventlist>java.lang.Exception</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</web_service>

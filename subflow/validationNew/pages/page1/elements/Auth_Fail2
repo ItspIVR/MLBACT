@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<action_element id="Element@6718171:1494355827480" name="PINResetSucess" version="6.0.1">
+<action_element id="Element@2826313:1496099958740" name="Auth_Fail2" version="6.0.1">
 <config>
 <settings>
 <setting name="maintainer"/>
@@ -9,7 +9,7 @@
 <setting name="remove_session_data"/>
 </settings>
 <session_data>
-<data create_when="Before" name="resetStatus">Success</data>
+<data create_when="Before" name="getAuth">N</data>
 </session_data>
 </config>
 </action_element>

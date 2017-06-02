@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@472105:1496089976758" name="CardNum_ReEnter" version="6.0.1">
+<config>
+<settings>
+<setting name="noinput_timeout">5s</setting>
+<setting name="max_noinput_count">3</setting>
+<setting name="max_nomatch_count">3</setting>
+<setting name="confidence_level">0.40</setting>
+<setting name="modal">false</setting>
+<setting name="option1_dtmf">1</setting>
+<setting name="option1_voice"/>
+<setting name="option1_value">1</setting>
+<setting name="option2_dtmf">0</setting>
+<setting name="option2_voice"/>
+<setting name="option2_value">0</setting>
+</settings>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="MLA_ReEnterCardNum_En.wav"><![CDATA[reenter 1, customer service 2]]></static>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="MLA_SpeakAgentPress0.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+<audio language="fr-CA">
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="MLA_ReEnterCardNum_Fr.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="MLA_SpeakAgentPress0_Fr.wav"/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

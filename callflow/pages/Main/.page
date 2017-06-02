@@ -104,17 +104,18 @@
 </exit_states>
 </element>
 <element height="46" id="Element@25305579:1494337301666" name="validation" type="Subflow Call" width="102" x="442" y="561">
-<subflow_call subflow_name="validation" target="Element@31:1494337304487">
+<subflow_call subflow_name="validationNew" target="Element@31:1496102236334">
 <config/>
 </subflow_call>
 <exit_states>
-<exit_state name="next" target="Element@32929163:1494351360703"/>
+<exit_state name="next" target="Element@11731282:1496349176705"/>
 </exit_states>
 </element>
 <element height="46" id="Element@32929163:1494351360703" name="Decision_getAuth" type="Decision" width="143" x="421" y="624">
 <exit_states>
 <exit_state name="T" target="Element@2851752:1494351410448"/>
 <exit_state name="F" target="Element@4533858:1494380793326"/>
+<exit_state name="CS" target="Element@32481176:1494535168055"/>
 </exit_states>
 </element>
 <element height="46" id="Element@2851752:1494351410448" name="Decision_isActive" type="Decision" width="141" x="422" y="696">
@@ -128,7 +129,7 @@
 <exit_state name="F" target="Element@4168618:1494351586906"/>
 </exit_states>
 </element>
-<element height="46" id="Element@11884692:1494351479723" name="Transfer" type="Page Connector" width="113" x="231" y="696">
+<element height="46" id="Element@11884692:1494351479723" name="Transfer" type="Page Connector" width="113" x="56" y="696">
 <page_connector target="Element@20043722:1494272968254">Transfer<config/>
 </page_connector>
 </element>
@@ -189,7 +190,7 @@
 </element>
 <element height="47" id="Element@28978126:1494356139626" name="Decision_pinReset" type="Decision" width="154" x="412" y="1197">
 <exit_states>
-<exit_state name="Success" target="Element@15438828:1494356396450"/>
+<exit_state name="Success" target="Element@13587247:1496345550760"/>
 <exit_state name="Agent" target="Element@3171407:1494356396450"/>
 <exit_state name="NUS" target="Element@3963337:1494356396450">
 <bendpoint>
@@ -267,13 +268,42 @@
 <exit_states>
 <exit_state name="option1" target="Element@3963337:1494356396450"/>
 <exit_state name="option2" target="Element@3171407:1494356396450"/>
-<exit_state name="max_nomatch" target="Element@3963337:1494356396450"/>
+<exit_state name="max_nomatch" target="Element@3963337:1494356396450">
+<bendpoint>
+<dim1 x="103" y="35"/>
+<dim2 x="-125" y="31"/>
+</bendpoint>
+</exit_state>
 <exit_state name="max_noinput" target="Element@3963337:1494356396450"/>
 </exit_states>
 </element>
 <element height="46" id="Element@4533858:1494380793326" name="ValidationFail" src="com.itsp.cvp.action.ItspCustomApplicationModifier" type="Action Element" width="121" x="227" y="624">
 <exit_states>
+<exit_state name="done" target="Element@29109589:1494529669534"/>
+</exit_states>
+</element>
+<element height="46" id="Element@29109589:1494529669534" name="Play_Validation_Fail" src="com.itsp.cvp.action.ItspCustomMAudio" type="Voice Element" width="153" x="36" y="624">
+<exit_states>
 <exit_state name="done" target="Element@11884692:1494351479723"/>
+</exit_states>
+</element>
+<element height="46" id="Element@32481176:1494535168055" name="ModifyAuth" src="com.itsp.cvp.action.ItspCustomApplicationModifier" type="Action Element" width="114" x="232" y="721">
+<exit_states>
+<exit_state name="done" target="Element@11884692:1494351479723"/>
+</exit_states>
+</element>
+<element height="46" id="Element@13587247:1496345550760" name="Decision_newAcc_upsell" type="Decision" width="178" x="673" y="1246">
+<exit_states>
+<exit_state name="T" target="Element@15438828:1494356396450"/>
+<exit_state name="F" target="Element@3963337:1494356396450"/>
+</exit_states>
+</element>
+<element height="46" id="Element@11731282:1496349176705" name="Slientauth" type="Subflow Call" width="113" x="635" y="568">
+<subflow_call subflow_name="slientSecond" target="Element@31:1496349201615">
+<config/>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@32929163:1494351360703"/>
 </exit_states>
 </element>
 </page>

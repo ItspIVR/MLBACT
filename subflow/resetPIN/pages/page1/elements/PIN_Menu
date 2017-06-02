@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<voice_element id="Element@22164448:1494355827481" name="PIN Menu" version="6.0.1">
+<voice_element id="Element@22164448:1494355827481" name="PIN_Menu" version="6.0.1">
 <config>
 <settings>
 <setting name="noinput_timeout">5s</setting>
@@ -78,11 +78,11 @@
 </audio_group>
 </audio>
 <element_data>
-<data create_when="After" name="menuUsage" storable="true" type="String">[{Data.Session.menuUsageCallEndDateTime}={Data.Element.PIN Menu.EndTime},{Data.Session.menuUsageCallStartDateTime}={Data.Element.PIN Menu.StartTime},{Data.Session.menuUsageMenuLabel}={Data.Element.PIN Menu.menuLabel},{Data.Session.menuUsageSelectedOption}={Data.Element.PIN Menu.value},{Data.Session.menuUsageReasonCode}={Data.Element.PIN Menu.value_confidence} ]</data>
+<data create_when="After" name="menuUsage" storable="true" type="String">[{Data.Session.menuUsageCallEndDateTime}={Data.Element.PIN_Menu.EndTime},{Data.Session.menuUsageCallStartDateTime}={Data.Element.PIN_Menu.StartTime},{Data.Session.menuUsageMenuLabel}={Data.Element.PIN_Menu.menuLabel},{Data.Session.menuUsageSelectedOption}={Data.Element.PIN_Menu.value},{Data.Session.menuUsageReasonCode}={Data.Element.PIN_Menu.value_confidence} ]</data>
 <data create_when="Before" name="menuLabel" storable="false" type="String">PIN Menu</data>
 </element_data>
 <session_data>
-<data create_when="After" name="menuUsageLog">{Data.Session.menuUsageLog}{Data.Element.PIN Menu.menuUsage}</data>
+<data create_when="After" name="menuUsageLog">{Data.Session.menuUsageLog}{Data.Element.PIN_Menu.menuUsage}</data>
 </session_data>
 </config>
 </voice_element>

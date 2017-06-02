@@ -11,6 +11,7 @@
 <session_data>
 <data create_when="Before" name="transfer_Status">PIN</data>
 <data create_when="Before" name="skillGroup">{Data.Session.lang_skillGroup}001</data>
+<data create_when="Before" name="exitState">skillGroup</data>
 </session_data>
 </config>
 </action_element>

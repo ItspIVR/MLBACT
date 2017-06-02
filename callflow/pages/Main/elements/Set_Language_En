@@ -11,6 +11,7 @@
 <session_data>
 <data create_when="Before" name="log_Lang">En</data>
 <data create_when="Before" name="lang_skillGroup">1</data>
+<data create_when="Before" name="lang">Eng</data>
 </session_data>
 </config>
 </action_element>

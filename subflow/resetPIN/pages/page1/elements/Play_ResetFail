@@ -22,5 +22,8 @@
 </audio_item>
 </audio_group>
 </audio>
+<session_data>
+<data create_when="Before" name="resetStatus">Agent</data>
+</session_data>
 </config>
 </voice_element>

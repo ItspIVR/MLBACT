@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<voice_element id="Element@22309108:1494355827480" name="InputPINAgain" version="6.0.1">
+<voice_element id="Element@654126:1494426885473" name="InputPINAgain" version="6.0.1">
 <config>
 <settings>
 <setting name="inputmode">both</setting>
 <setting name="noinput_timeout">5s</setting>
 <setting name="max_noinput_count">3</setting>
-<setting name="max_nomatch_count">3</setting>
+<setting name="max_nomatch_count">1</setting>
 <setting name="digits_confidence_level">0.40</setting>
 <setting name="min_digit">4</setting>
-<setting name="max_digit">4</setting>
+<setting name="max_digit">5</setting>
 <setting name="modal">false</setting>
 <setting name="secure_logging">true</setting>
 <setting name="maxnbest">1</setting>
@@ -19,14 +19,6 @@
 <audio_item_notes/>
 <audio_item_config view_id="default">
 <static default_audio_path="true" uri="MLA_InputPINAgain_En.wav"/>
-</audio_item_config>
-</audio_item>
-</audio_group>
-<audio_group barge_in="true" count="1" name="nomatch_audio_group">
-<audio_item name="audio item 1" type="static">
-<audio_item_notes/>
-<audio_item_config view_id="default">
-<static default_audio_path="true" uri="MLA_NoMatch_En.wav"/>
 </audio_item_config>
 </audio_item>
 </audio_group>
@@ -49,5 +41,12 @@
 </audio_item>
 </audio_group>
 </audio>
+<element_data>
+<data create_when="Before" name="menuLabel" storable="false" type="String">InputPINAgain</data>
+<data create_when="After" name="menuUsage" storable="true" type="String">[{Data.Session.menuUsageCallEndDateTime}={Data.Element.InputPINAgain.EndTime}, {Data.Session.menuUsageCallStartDateTime}={Data.Element.InputPINAgain.StartTime}, {Data.Session.menuUsageMenuLabel}={Data.Element.InputPINAgain.menuLabel}, {Data.Session.menuUsageSelectedOption}={Data.Session.Log_PIN}, {Data.Session.menuUsageReasonCode}={Data.Element.InputPINAgain.value_confidence}]</data>
+</element_data>
+<session_data>
+<data create_when="After" name="menuUsageLog">{Data.Session.menuUsageLog}{Data.Element.InputPINAgain.menuUsage}</data>
+</session_data>
 </config>
 </voice_element>

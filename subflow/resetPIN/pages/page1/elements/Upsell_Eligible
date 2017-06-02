@@ -13,4 +13,5 @@
     </rule>
 </knowledge_base>]]></source>
 </config>
+<skipped exit_state="T"/>
 </decision>

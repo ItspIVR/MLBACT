@@ -11,6 +11,14 @@
                 <constant_string value="Y" />
             </string>
         </exit_state>
+        <exit_state name="CS" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="getAuth" />
+                </data>
+                <constant_string value="CS" />
+            </string>
+        </exit_state>
     </rule>
 </knowledge_base>]]></source>
 </config>

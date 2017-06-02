@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@16867396:1496089976758" name="Get_DOB_Log" version="6.0.1">
+<config>
+<dynamic base_config="true" type="Class">com.manulife.ivr.action.DynamicSetTimeStamp</dynamic>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+<element_data>
+<data create_when="Before" name="transactionStartDateTime" storable="false" type="String">{Data.Element.Init_Get_DOB_Parameters.TimeStamp}</data>
+<data create_when="After" name="transactionEndDateTime" storable="false" type="String">{Data.Element.Get_DOB_Log.TimeStamp}</data>
+<data create_when="Before" name="transactionId" storable="false" type="String">Get_DOB_WS</data>
+<data create_when="Before" name="Status" storable="false" type="Boolean">{Data.Element.Get_DOB_WS.result}</data>
+<data create_when="Before" name="ErrorCode" storable="false" type="String">0</data>
+<data create_when="Before" name="RequestXml" storable="true" type="String">card number = {Data.Session.Card_Number}</data>
+<data create_when="Before" name="ReturnXml" storable="true" type="String">result={Data.Element.Get_DOB_WS.result} message={Data.Element.Get_DOB_WS.message} DOB={Data.Element.Get_DOB_WS.DOB} accountNumber={Data.Session.accountNumber} externalCardStatus={Data.Session.external} internalCardStatus={Data.Session.internal}</data>
+<data create_when="After" name="transactionLog" storable="true" type="String">[{Data.Session.transactionStartDateTimeLabel}={Data.Element.Get_DOB_Log.transactionStartDateTime},{Data.Session.transactionEndDateTimeLabel}={Data.Element.Get_DOB_Log.transactionEndDateTime},{Data.Session.transactionIdLabel}={Data.Element.Get_DOB_Log.transactionId},{Data.Session.statusLabel}={Data.Element.Get_DOB_Log.Status},{Data.Session.errorCodeLabel}={Data.Element.Get_DOB_Log.ErrorCode},{Data.Session.RequestXmlLabel}={Data.Element.Get_DOB_Log.RequestXml},{Data.Session.ReturnXmlLabel}={Data.Element.Get_DOB_Log.ReturnXml},{Data.Session.ErrorMsgLabel}={Data.Element.Get_DOB_Log.ErrorMsg}]</data>
+<data create_when="Before" name="ErrorMsg" storable="false" type="String">{Data.Element.Get_DOB_WS.message}</data>
+</element_data>
+<session_data>
+<data create_when="After" name="DOB">{Data.Element.Get_DOB_WS.DOB}</data>
+<data create_when="After" name="transactionLogs">{Data.Session.transactionLogs}{Data.Session.transactionLog}</data>
+</session_data>
+</config>
+</action_element>

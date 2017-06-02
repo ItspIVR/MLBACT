@@ -12,7 +12,7 @@
 <part name="parameters">
 <nklviwnaspovnqwnfl1:aniLookup xmlns:nklviwnaspovnqwnfl1="http://esb.mls.com">
 <AppID>{Data.Session.AppID}</AppID>
-<ANI>6478617036</ANI>
+<ANI>{CallData.ANI}</ANI>
 </nklviwnaspovnqwnfl1:aniLookup>
 </part>
 </input_parameter_configs>

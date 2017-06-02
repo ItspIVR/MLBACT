@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <connector id="Element@25305579:1494337301666" name="validation" version="6.0.1">
-<subflow_call subflow_name="validation" target="Element@31:1494337304487">
+<subflow_call subflow_name="validationNew" target="Element@31:1496102236334">
 <config/>
 </subflow_call>
 </connector>

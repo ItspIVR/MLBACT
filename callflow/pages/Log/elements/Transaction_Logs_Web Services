@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<web_service id="Element@3437086:1494447168893" name="Transaction_Logs_Web Services" version="6.0.1">
+<config>
+<uri_or_file>File</uri_or_file>
+<wsdl_file_location>-831792600</wsdl_file_location>
+<original_wsdl_file_location>C:\Sandbox\vzheng\DefaultBox\drive\C\workspace\IVR\MLBACT\wsdl\generic.wsdl</original_wsdl_file_location>
+<service_name>InternalServerService</service_name>
+<service_namespace>http://esb.mls.com</service_namespace>
+<port_name>InternalServerPort</port_name>
+<operation_name>Transaction_Log</operation_name>
+<input_parameter_configs>
+<part name="parameters">
+<nklviwnaspovnqwnfl1:Transaction_Log xmlns:nklviwnaspovnqwnfl1="http://esb.mls.com">
+<Switch_ID>{Data.Element.Transaction_Logs_Parameters.switchIDs}</Switch_ID>
+<Transaction_StartDateTime>{Data.Element.Transaction_Logs_Parameters.transactionStartDateTimes}</Transaction_StartDateTime>
+<Transaction_EndDateTime>{Data.Element.Transaction_Logs_Parameters.transactionEndDateTimes}</Transaction_EndDateTime>
+<CDR>{Data.Element.Transaction_Logs_Parameters.CDRs}</CDR>
+<Duration>{Data.Element.Transaction_Logs_Parameters.durations}</Duration>
+<Application_Id>{Data.Element.Transaction_Logs_Parameters.applicationIds}</Application_Id>
+<Transaction_Id>{Data.Element.Transaction_Logs_Parameters.transactionIds}</Transaction_Id>
+<Status>{Data.Element.Transaction_Logs_Parameters.statuss}</Status>
+<Error_Code>{Data.Element.Transaction_Logs_Parameters.errorCodes}</Error_Code>
+<Request_XML>{Data.Element.Transaction_Logs_Parameters.requestXmls}</Request_XML>
+<Return_XML>{Data.Element.Transaction_Logs_Parameters.returnXmls}</Return_XML>
+<Error_MSG>{Data.Element.Transaction_Logs_Parameters.errorMsgs}</Error_MSG>
+</nklviwnaspovnqwnfl1:Transaction_Log>
+</part>
+</input_parameter_configs>
+<output_parameter_configs store_response_xml="true">
+<queries>
+<part name="parameters">
+<query storein="element" varname="result">/Transaction_LogResponse/Result</query>
+<query storein="element" varname="message">/Transaction_LogResponse/Message</query>
+</part>
+</queries>
+</output_parameter_configs>
+<requires_http_authentication>true</requires_http_authentication>
+<username>{Data.Session.USER}</username>
+<password>{Data.Session.PASSWORD}</password>
+<use_substitution_for_password>true</use_substitution_for_password>
+<use_proxy>false</use_proxy>
+<proxy_host/>
+<proxy_port/>
+<connect_timeout>8</connect_timeout>
+<local_events>
+<local_event>
+<name>error</name>
+<eventlist>java.lang.Exception</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</web_service>

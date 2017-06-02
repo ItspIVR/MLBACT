@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@7688104:1494447971308" name="Menu_Usage_Backup_Action" version="6.0.1">
+<config>
+<settings>
+<setting name="filePath">C:\Temp\manulifelog\</setting>
+<setting name="fileName">MenuUsageLogs.cvs</setting>
+<setting name="logRecordType">MenuUsage</setting>
+<setting name="logRecords"> {Data.Session.menuUsageLog}</setting>
+</settings>
+<element_data>
+<data create_when="Before" name="message" storable="false" type="String">{Data.Element.Menu_Usage_Logs_Web Services.message}</data>
+</element_data>
+</config>
+</action_element>

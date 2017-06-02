@@ -95,7 +95,7 @@ LoggerEvent.6=xmlApiError]]></config_file>
 <suspended_message uri="/CVP/audio/suspend_audio.wav"><![CDATA[Sorry, this voice application has been taken down for maintenance.]]></suspended_message>
 <initial_on_hold>/CVP/audio/onhold_initial.wav</initial_on_hold>
 <main_on_hold>/CVP/audio/onhold_continue.wav</main_on_hold>
-<default_audio_path>http://10.248.205.19:80/en-us/app/MLBACT_20170502_v4/</default_audio_path>
+<default_audio_path>http://10.248.205.19:80/en-us/app/MLBACT_20170601v1/</default_audio_path>
 </audio_settings>
 <endpoint_settings/>
 <root_doc_settings/>

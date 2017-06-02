@@ -9,6 +9,7 @@
 <setting name="remove_session_data"/>
 </settings>
 <session_data>
+<data create_when="Before" name="exitState">skillGroup</data>
 <data create_when="Before" name="transfer_Status">upsell</data>
 <data create_when="Before" name="skillGroup">{Data.Session.lang_skillGroup}002</data>
 </session_data>

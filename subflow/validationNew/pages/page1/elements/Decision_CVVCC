@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@9311323:1496105175588" name="Decision_CVVCC" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Decision_CVVCC" default_exit_state="F">
+        <exit_state name="T" conjugate="and">
+            <number operator="less">
+                <data>
+                    <element name="CVV_ReEnterCounter" variable="count" />
+                </data>
+                <constant_number value="2" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

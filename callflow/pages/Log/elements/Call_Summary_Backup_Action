@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@27325298:1494446339900" name="Call_Summary_Backup_Action" version="6.0.1">
+<config>
+<settings>
+<setting name="filePath">C:\Temp\manulifelog\</setting>
+<setting name="fileName">CallSummaryLogs.cvs</setting>
+<setting name="logRecordType">CallSummary</setting>
+<setting name="logRecords"> {Data.Session.menuUsageLog}</setting>
+</settings>
+<element_data>
+<data create_when="Before" name="message" storable="true" type="String">{Data.Element.Call_Summary_Logs_Web Service.message}</data>
+</element_data>
+</config>
+</action_element>

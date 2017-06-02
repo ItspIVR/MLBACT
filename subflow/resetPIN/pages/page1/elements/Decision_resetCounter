@@ -4,7 +4,7 @@
 <source type="Decision Editor"><![CDATA[<knowledge_base>
     <rule name="Decision_resetCounter" default_exit_state="false">
         <exit_state name="true" conjugate="and">
-            <number operator="greater">
+            <number operator="less">
                 <data>
                     <element name="resetCounter" variable="count" />
                 </data>

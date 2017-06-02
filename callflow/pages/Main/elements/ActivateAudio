@@ -6,13 +6,29 @@
 <audio_item name="audio item 1" type="static">
 <audio_item_notes/>
 <audio_item_config view_id="default">
-<static default_audio_path="true" uri=""><![CDATA[Please hold while we activate your account]]></static>
+<static default_audio_path="true" uri="MLA_ActivateHold_En.wav"><![CDATA[Please hold while we activate your account]]></static>
 </audio_item_config>
 </audio_item>
 <audio_item name="audio item 2" type="static">
 <audio_item_notes/>
 <audio_item_config view_id="default">
-<static default_audio_path="true" uri=""><![CDATA[silent second]]></static>
+<static default_audio_path="true" uri="MLA_SilenceSecond.wav"><![CDATA[silent second]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+<audio language="fr-CA">
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="MLA_ActivateHold_Fr.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="MLA_SilenceSecond.wav"/>
 </audio_item_config>
 </audio_item>
 </audio_group>

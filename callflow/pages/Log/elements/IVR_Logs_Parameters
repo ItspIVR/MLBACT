@@ -9,5 +9,18 @@
 <setting name="default_audio_path"/>
 <setting name="remove_session_data"/>
 </settings>
+<element_data>
+<data create_when="Before" name="switchID" storable="true" type="String">12345</data>
+<data create_when="Before" name="companyID" storable="true" type="String">ML</data>
+<data create_when="Before" name="businessUnit" storable="true" type="String">IVR</data>
+<data create_when="Before" name="productLine" storable="true" type="String">ML</data>
+<data create_when="Before" name="source" storable="true" type="String"> </data>
+<data create_when="Before" name="IVRPort" storable="false" type="String">  </data>
+<data create_when="Before" name="callCenterDestination" storable="false" type="String">{Data.Session.skillGroup}  </data>
+<data create_when="Before" name="skillGroup" storable="true" type="String">{Data.Session.skillGroup}  </data>
+</element_data>
+<session_data>
+<data create_when="Before" name="CDR">{Data.Element.IVR_Logs_Parameters.switchID}{Data.Session.CDR}</data>
+</session_data>
 </config>
 </action_element>

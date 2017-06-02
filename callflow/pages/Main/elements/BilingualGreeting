@@ -19,6 +19,7 @@
 </audio>
 <element_data>
 <data create_when="Before" name="menuLabel" storable="false" type="String">BilingualGreeting</data>
+<data create_when="After" name="menuUsage" storable="true" type="String">[{Data.Session.menuUsageCallEndDateTime}={Data.Element.BilingualGreeting.EndTime}, {Data.Session.menuUsageCallStartDateTime}={Data.Element.BilingualGreeting.StartTime}, {Data.Session.menuUsageMenuLabel}={Data.Element.BilingualGreeting.menuLabel}, {Data.Session.menuUsageSelectedOption}=,{Data.Session.menuUsageReasonCode} = ]</data>
 </element_data>
 <session_data>
 <data create_when="After" name="upsellDate">{Data.Element.BilingualGreeting.StartTime}</data>

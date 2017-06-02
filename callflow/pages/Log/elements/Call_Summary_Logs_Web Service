@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<web_service id="Element@32625226:1494429924213" name="Call_Summary_Logs_Web Service" version="6.0.1">
+<config>
+<uri_or_file>File</uri_or_file>
+<wsdl_file_location>1954847174</wsdl_file_location>
+<original_wsdl_file_location>C:\Sandbox\vzheng\DefaultBox\drive\C\workspace\IVR\MLBACT\wsdl\generic.wsdl</original_wsdl_file_location>
+<service_name>InternalServerService</service_name>
+<service_namespace>http://esb.mls.com</service_namespace>
+<port_name>InternalServerPort</port_name>
+<operation_name>IVR_Call_Summary</operation_name>
+<input_parameter_configs>
+<part name="parameters">
+<nklviwnaspovnqwnfl1:IVR_Call_Summary xmlns:nklviwnaspovnqwnfl1="http://esb.mls.com">
+<Switch_id>{Data.Element.IVR_Logs_Parameters.switchID}</Switch_id>
+<CDR>{Data.Session.CDR}</CDR>
+<Call_StartDateTime>{Data.Element.Init_Data.TimeStamp}</Call_StartDateTime>
+<Call_EndDateTime>{Data.Element.IVR_Logs_Parameters.TimeStamp}</Call_EndDateTime>
+<DNIS>{CallData.DNIS}</DNIS>
+<ANI>{CallData.ANI}</ANI>
+<Caller_Language>{Data.Session.log_Lang}</Caller_Language>
+<Region>{Data.Element.AreaCodeLookup.region}</Region>
+<Source>{Data.Element.IVR_Logs_Parameters.source}</Source>
+<Status>{Data.Session.CallStatus}</Status>
+<Call_Center_Destination>{Data.Element.IVR_Logs_Parameters.callCenterDestination}</Call_Center_Destination>
+<SkillGroup>{Data.Element.IVR_Logs_Parameters.skillGroup}</SkillGroup>
+<Transfer_Destination>{Data.Session.skillGroup}</Transfer_Destination>
+<Last_Location>{Data.Element.IVR_Logs_Parameters.lastLocation}</Last_Location>
+<Account_Number>{Data.Session.Log_CardNum}</Account_Number>
+<UCID>{CallData.UUI}</UCID>
+<Company_ID>{Data.Element.IVR_Logs_Parameters.companyID}</Company_ID>
+<Business_Unit>{Data.Element.IVR_Logs_Parameters.businessUnit}</Business_Unit>
+<Application_ID>{Data.Session.AppID}</Application_ID>
+<Product_Line>{Data.Element.IVR_Logs_Parameters.productLine}</Product_Line>
+</nklviwnaspovnqwnfl1:IVR_Call_Summary>
+</part>
+</input_parameter_configs>
+<output_parameter_configs store_response_xml="true">
+<queries>
+<part name="parameters">
+<query storein="element" varname="result">/IVR_Call_SummaryResponse/Result</query>
+</part>
+</queries>
+</output_parameter_configs>
+<requires_http_authentication>true</requires_http_authentication>
+<username>{Data.Session.USER}</username>
+<password>{Data.Session.PASSWORD}</password>
+<use_substitution_for_password>true</use_substitution_for_password>
+<use_proxy>false</use_proxy>
+<proxy_host/>
+<proxy_port/>
+<connect_timeout>8</connect_timeout>
+<local_events>
+<local_event>
+<name>error</name>
+<eventlist>java.lang.Exception</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</web_service>

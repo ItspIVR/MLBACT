@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@31807142:1496089976758" name="Init_Get_DOB_Parameters" version="6.0.1">
+<config>
+<dynamic base_config="true" type="Class">com.manulife.ivr.action.DynamicSetTimeStamp</dynamic>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+<session_data>
+<data create_when="Before" name="count">0</data>
+</session_data>
+</config>
+</action_element>

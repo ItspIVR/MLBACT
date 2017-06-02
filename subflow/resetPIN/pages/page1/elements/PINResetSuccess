@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@6718171:1494355827480" name="PINResetSuccess" version="6.0.1">
+<config>
+<dynamic base_config="true" type="Class">com.itsp.cvp.action.ItspDynamicSetTimeStamp</dynamic>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+<element_data>
+<data create_when="Before" name="transactionStartDateTime" storable="false" type="String">{Data.Element.EncryptPIN.TimeStamp}</data>
+<data create_when="After" name="transactionEndDateTime" storable="false" type="String">{Data.Element.PINResetSuccess.TimeStamp}</data>
+<data create_when="Before" name="transactionId" storable="false" type="String">resetPIN_WS</data>
+<data create_when="Before" name="Status" storable="false" type="String">{Data.Session.resetResult}</data>
+<data create_when="Before" name="ErrorCode" storable="false" type="String">0</data>
+<data create_when="Before" name="ReturnXml" storable="true" type="String">status={Data.Session.resetResult}</data>
+<data create_when="Before" name="RequestXml" storable="true" type="String">card number={Data.Session.Log_CardNum}</data>
+<data create_when="After" name="transactionLog" storable="true" type="String">[{Data.Session.transactionStartDateTimeLabel}={Data.Element.PINResetSuccess.transactionStartDateTime}, {Data.Session.transactionEndDateTimeLabel}={Data.Element.PINResetSuccess.transactionEndDateTime}, {Data.Session.transactionIdLabel}={Data.Element.PINResetSuccess.transactionId}, {Data.Session.statusLabel}={Data.Element.PINResetSuccess.Status}, {Data.Session.errorCodeLabel}={Data.Element.PINResetSuccess.ErrorCode}, {Data.Session.RequestXmlLabel}={Data.Element.PINResetSuccess.RequestXml}, {Data.Session.ReturnXmlLabel}={Data.Element.PINResetSuccess.ReturnXml}, {Data.Session.ErrorMsgLabel}={Data.Element.PINResetSuccess.ErrorMsg}]</data>
+<data create_when="Before" name="ErrorMsg" storable="false" type="String"> </data>
+</element_data>
+<session_data>
+<data create_when="Before" name="resetStatus">Success</data>
+<data create_when="After" name="transactionLogs">{Data.Session.transactionLogs}{Data.Element.PINResetSuccess.transactionLog}</data>
+</session_data>
+</config>
+</action_element>

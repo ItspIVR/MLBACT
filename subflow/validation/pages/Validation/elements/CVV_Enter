@@ -33,5 +33,12 @@
 </audio_item>
 </audio_group>
 </audio>
+<element_data>
+<data create_when="Before" name="menuLabel" storable="false" type="String">CVV_Enter</data>
+<data create_when="After" name="menuUsage" storable="true" type="String">[{Data.Session.menuUsageCallEndDateTime}={Data.Element.CVV_Enter.EndTime},{Data.Session.menuUsageCallStartDateTime}={Data.Element.CVV_Enter.StartTime},{Data.Session.menuUsageMenuLabel}={Data.Element.CVV_Enter.menuLabel},{Data.Session.menuUsageSelectedOption}={Data.Session.Log_CVV},{Data.Session.menuUsageReasonCode}={Data.Element.CVV_Enter.value_confidence}]</data>
+</element_data>
+<session_data>
+<data create_when="After" name="menuUsageLog">{Data.Session.menuUsageLog}{Data.Element.CVV_Enter.menuUsage}</data>
+</session_data>
 </config>
 </voice_element>

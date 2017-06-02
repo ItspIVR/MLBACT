@@ -1,0 +1,375 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://esb.mls.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="ExternalServerService" targetNamespace="http://esb.mls.com">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://esb.mls.com" elementFormDefault="unqualified" targetNamespace="http://esb.mls.com" version="1.0">
+
+  <xs:element name="cardActivation" type="tns:cardActivation"/>
+
+  <xs:element name="cardActivationResponse" type="tns:cardActivationResponse"/>
+
+  <xs:element name="doAuthenticationCheckCard" type="tns:doAuthenticationCheckCard"/>
+
+  <xs:element name="doAuthenticationCheckCardCVV" type="tns:doAuthenticationCheckCardCVV"/>
+
+  <xs:element name="doAuthenticationCheckCardCVVResponse" type="tns:doAuthenticationCheckCardCVVResponse"/>
+
+  <xs:element name="doAuthenticationCheckCardResponse" type="tns:doAuthenticationCheckCardResponse"/>
+
+  <xs:element name="getBonusPoint" type="tns:getBonusPoint"/>
+
+  <xs:element name="getBonusPointResponse" type="tns:getBonusPointResponse"/>
+
+  <xs:element name="getCurrentBalance" type="tns:getCurrentBalance"/>
+
+  <xs:element name="getCurrentBalanceResponse" type="tns:getCurrentBalanceResponse"/>
+
+  <xs:element name="getPayments" type="tns:getPayments"/>
+
+  <xs:element name="getPaymentsResponse" type="tns:getPaymentsResponse"/>
+
+  <xs:element name="getPurchaseTrxDetail" type="tns:getPurchaseTrxDetail"/>
+
+  <xs:element name="getPurchaseTrxDetailResponse" type="tns:getPurchaseTrxDetailResponse"/>
+
+  <xs:element name="pinReset" type="tns:pinReset"/>
+
+  <xs:element name="pinResetResponse" type="tns:pinResetResponse"/>
+
+  <xs:complexType name="getPayments">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getPaymentsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Message" type="xs:string"/>
+      <xs:element minOccurs="0" name="AmountPaid" type="xs:string"/>
+      <xs:element minOccurs="0" name="PaymentDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="TotalRecords" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getCurrentBalance">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getCurrentBalanceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Message" type="xs:string"/>
+      <xs:element minOccurs="0" name="NextPaymentDueDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="AvailableCreditAmount" type="xs:string"/>
+      <xs:element minOccurs="0" name="CurrentBalanceAmount" type="xs:string"/>
+      <xs:element minOccurs="0" name="MinimumPaymentDue" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="doAuthenticationCheckCard">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreditCardNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="Ani" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="doAuthenticationCheckCardResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Message" type="xs:string"/>
+      <xs:element minOccurs="0" name="AccountNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="ExternalStatusCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="Flag" type="xs:string"/>
+      <xs:element minOccurs="0" name="InternalStatusCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="CardActiveStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="PresentationInstrumentIdentifier" type="xs:string"/>
+      <xs:element minOccurs="0" name="PresentationInstrumentReplacementSequenceNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="PrimaryCardHolder" type="xs:string"/>
+      <xs:element minOccurs="0" name="BirthDay" type="xs:string"/>
+      <xs:element minOccurs="0" name="VIP" type="xs:string"/>
+      <xs:element minOccurs="0" name="FirstName" type="xs:string"/>
+      <xs:element minOccurs="0" name="LastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="AniInAccount" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pinReset">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PinBlock" type="xs:string"/>
+      <xs:element minOccurs="0" name="PresentationInstrumentIdentifier" type="xs:string"/>
+      <xs:element minOccurs="0" name="PresentationInstrumentReplacementSequenceNumber" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pinResetResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Message" type="xs:string"/>
+      <xs:element minOccurs="0" name="PinResetStatus" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="cardActivation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreditCardNumber" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="cardActivationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="doAuthenticationCheckCardCVV">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreditCardNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="CVV" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="doAuthenticationCheckCardCVVResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getBonusPoint">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getBonusPointResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Message" type="xs:string"/>
+      <xs:element minOccurs="0" name="LastStatementBonusAccumulatedRebateAmount" type="xs:string"/>
+      <xs:element minOccurs="0" name="LastStatementBonusRebateAmount" type="xs:string"/>
+      <xs:element minOccurs="0" name="RegistrationDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="ProgramName " type="xs:string"/>
+      <xs:element minOccurs="0" name="TotalRecords" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getPurchaseTrxDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountId" type="xs:string"/>
+      <xs:element minOccurs="0" name="FileId" type="xs:string"/>
+      <xs:element minOccurs="0" name="Language" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getPurchaseTrxDetailResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Message" type="xs:string"/>
+      <xs:element minOccurs="0" name="TransactionAmount" type="xs:string"/>
+      <xs:element minOccurs="0" name="TransactionDate" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantName" type="xs:string"/>
+      <xs:element minOccurs="0" name="TotalRecords" type="xs:int"/>
+      <xs:element minOccurs="0" name="TransactionCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="UrlLink" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getPayments">
+    <wsdl:part element="tns:getPayments" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCurrentBalance">
+    <wsdl:part element="tns:getCurrentBalance" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPurchaseTrxDetailResponse">
+    <wsdl:part element="tns:getPurchaseTrxDetailResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="pinReset">
+    <wsdl:part element="tns:pinReset" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="pinResetResponse">
+    <wsdl:part element="tns:pinResetResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCurrentBalanceResponse">
+    <wsdl:part element="tns:getCurrentBalanceResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="doAuthenticationCheckCardCVV">
+    <wsdl:part element="tns:doAuthenticationCheckCardCVV" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPurchaseTrxDetail">
+    <wsdl:part element="tns:getPurchaseTrxDetail" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="doAuthenticationCheckCard">
+    <wsdl:part element="tns:doAuthenticationCheckCard" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="doAuthenticationCheckCardCVVResponse">
+    <wsdl:part element="tns:doAuthenticationCheckCardCVVResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBonusPointResponse">
+    <wsdl:part element="tns:getBonusPointResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cardActivation">
+    <wsdl:part element="tns:cardActivation" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="doAuthenticationCheckCardResponse">
+    <wsdl:part element="tns:doAuthenticationCheckCardResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBonusPoint">
+    <wsdl:part element="tns:getBonusPoint" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cardActivationResponse">
+    <wsdl:part element="tns:cardActivationResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPaymentsResponse">
+    <wsdl:part element="tns:getPaymentsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ExternalServer">
+    <wsdl:operation name="getPayments">
+      <wsdl:input message="tns:getPayments" name="getPayments">
+    </wsdl:input>
+      <wsdl:output message="tns:getPaymentsResponse" name="getPaymentsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentBalance">
+      <wsdl:input message="tns:getCurrentBalance" name="getCurrentBalance">
+    </wsdl:input>
+      <wsdl:output message="tns:getCurrentBalanceResponse" name="getCurrentBalanceResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doAuthenticationCheckCard">
+      <wsdl:input message="tns:doAuthenticationCheckCard" name="doAuthenticationCheckCard">
+    </wsdl:input>
+      <wsdl:output message="tns:doAuthenticationCheckCardResponse" name="doAuthenticationCheckCardResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pinReset">
+      <wsdl:input message="tns:pinReset" name="pinReset">
+    </wsdl:input>
+      <wsdl:output message="tns:pinResetResponse" name="pinResetResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cardActivation">
+      <wsdl:input message="tns:cardActivation" name="cardActivation">
+    </wsdl:input>
+      <wsdl:output message="tns:cardActivationResponse" name="cardActivationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doAuthenticationCheckCardCVV">
+      <wsdl:input message="tns:doAuthenticationCheckCardCVV" name="doAuthenticationCheckCardCVV">
+    </wsdl:input>
+      <wsdl:output message="tns:doAuthenticationCheckCardCVVResponse" name="doAuthenticationCheckCardCVVResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBonusPoint">
+      <wsdl:input message="tns:getBonusPoint" name="getBonusPoint">
+    </wsdl:input>
+      <wsdl:output message="tns:getBonusPointResponse" name="getBonusPointResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPurchaseTrxDetail">
+      <wsdl:input message="tns:getPurchaseTrxDetail" name="getPurchaseTrxDetail">
+    </wsdl:input>
+      <wsdl:output message="tns:getPurchaseTrxDetailResponse" name="getPurchaseTrxDetailResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ExternalServerServiceSoapBinding" type="tns:ExternalServer">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getPayments">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getPayments">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPaymentsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentBalance">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getCurrentBalance">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCurrentBalanceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doAuthenticationCheckCard">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="doAuthenticationCheckCard">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="doAuthenticationCheckCardResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pinReset">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="pinReset">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="pinResetResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cardActivation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="cardActivation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="cardActivationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doAuthenticationCheckCardCVV">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="doAuthenticationCheckCardCVV">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="doAuthenticationCheckCardCVVResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBonusPoint">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getBonusPoint">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getBonusPointResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPurchaseTrxDetail">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getPurchaseTrxDetail">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPurchaseTrxDetailResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ExternalServerService">
+    <wsdl:port binding="tns:ExternalServerServiceSoapBinding" name="ExternalServerPort">
+      <soap:address location="https://manulife.millennium1solutions.com:8444/manulife/firstdata"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

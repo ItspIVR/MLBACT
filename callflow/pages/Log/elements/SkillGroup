@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<subdialog_return id="Element@15542409:1494448075748" name="SkillGroup" version="6.0.1">
+<config>
+<settings>
+<setting name="caller_input">1</setting>
+<setting name="FromExtVXML0">{Data.Session.lang};{Data.Session.skillGroup}</setting>
+<setting name="FromExtVXML1">{Data.Session.getAuth}{Data.Session.productType}{Data.Session.accountNumber}</setting>
+<setting name="FromExtVXML2"/>
+<setting name="FromExtVXML3"/>
+</settings>
+</config>
+</subdialog_return>

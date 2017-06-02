@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<web_service id="Element@26993831:1496089976758" name="Get_DOB_WS" version="6.0.1">
+<config>
+<uri_or_file>File</uri_or_file>
+<wsdl_file_location>900941851</wsdl_file_location>
+<original_wsdl_file_location>E:\Manulife\Product\ManulifeIVR\wsdl\firstdata.wsdl</original_wsdl_file_location>
+<service_name>ExternalServerService</service_name>
+<service_namespace>http://esb.mls.com</service_namespace>
+<port_name>ExternalServerPort</port_name>
+<operation_name>doAuthenticationCheckCard</operation_name>
+<input_parameter_configs>
+<part name="parameters">
+<nklviwnaspovnqwnfl1:doAuthenticationCheckCard xmlns:nklviwnaspovnqwnfl1="http://esb.mls.com">
+<CreditCardNumber>{Data.Element.Card_Number_Enter.value}</CreditCardNumber>
+<Ani>{CallData.ANI}</Ani>
+</nklviwnaspovnqwnfl1:doAuthenticationCheckCard>
+</part>
+</input_parameter_configs>
+<output_parameter_configs store_response_xml="true">
+<queries>
+<part name="parameters">
+<query storein="element" varname="result">/doAuthenticationCheckCardResponse/Result</query>
+<query storein="session" varname="accountNumber">/doAuthenticationCheckCardResponse/AccountNumber</query>
+<query storein="element" varname="cardStatus">/doAuthenticationCheckCardResponse/ExternalStatusCode</query>
+<query storein="element" varname="internalCardStatus">/doAuthenticationCheckCardResponse/InternalStatusCode</query>
+<query storein="session" varname="isActive">/doAuthenticationCheckCardResponse/CardActiveStatus</query>
+<query storein="session" varname="seq">/doAuthenticationCheckCardResponse/PresentationInstrumentReplacementSequenceNumber</query>
+<query storein="session" varname="isPrimary">/doAuthenticationCheckCardResponse/PrimaryCardHolder</query>
+<query storein="element" varname="DOB">/doAuthenticationCheckCardResponse/BirthDay</query>
+<query storein="session" varname="isVIP">/doAuthenticationCheckCardResponse/VIP</query>
+<query storein="session" varname="firstName">/doAuthenticationCheckCardResponse/FirstName</query>
+<query storein="session" varname="lastName">/doAuthenticationCheckCardResponse/LastName</query>
+<query storein="session" varname="productType">/doAuthenticationCheckCardResponse/ProductType</query>
+</part>
+</queries>
+</output_parameter_configs>
+<requires_http_authentication>true</requires_http_authentication>
+<username>{Data.Session.USER}</username>
+<password>{Data.Session.PASSWORD}</password>
+<use_substitution_for_password>true</use_substitution_for_password>
+<use_proxy>false</use_proxy>
+<proxy_host/>
+<proxy_port/>
+<connect_timeout>8</connect_timeout>
+<local_events>
+<local_event>
+<name>error</name>
+<eventlist>java.lang.Exception</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</web_service>

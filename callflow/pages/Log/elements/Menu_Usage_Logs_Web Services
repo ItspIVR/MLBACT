@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<web_service id="Element@19217784:1494447696875" name="Menu_Usage_Logs_Web Services" version="6.0.1">
+<config>
+<uri_or_file>File</uri_or_file>
+<wsdl_file_location>-831792600</wsdl_file_location>
+<original_wsdl_file_location>C:\Sandbox\vzheng\DefaultBox\drive\C\workspace\IVR\MLBACT\wsdl\generic.wsdl</original_wsdl_file_location>
+<service_name>InternalServerService</service_name>
+<service_namespace>http://esb.mls.com</service_namespace>
+<port_name>InternalServerPort</port_name>
+<operation_name>Menu_Usage_Log</operation_name>
+<input_parameter_configs>
+<part name="parameters">
+<nklviwnaspovnqwnfl1:Menu_Usage_Log xmlns:nklviwnaspovnqwnfl1="http://esb.mls.com">
+<SwitchId>{Data.Element.Menu_Usage_Logs_Parameters.switchIDs}</SwitchId>
+<Call_StartDateTime>{Data.Element.Menu_Usage_Logs_Parameters.callStartDateTimes}</Call_StartDateTime>
+<Call_EndDateTime>{Data.Element.Menu_Usage_Logs_Parameters.callEndDateTimes}</Call_EndDateTime>
+<CDR>{Data.Element.Menu_Usage_Logs_Parameters.CDRs}</CDR>
+<Application_Id>{Data.Element.Menu_Usage_Logs_Parameters.applicationIds}</Application_Id>
+<Source>{Data.Element.Menu_Usage_Logs_Parameters.sources}</Source>
+<Region>{Data.Element.Menu_Usage_Logs_Parameters.regions}</Region>
+<Menu_Label>{Data.Element.Menu_Usage_Logs_Parameters.menuLabels}</Menu_Label>
+<Option_Selected>{Data.Element.Menu_Usage_Logs_Parameters.selectedOptions}</Option_Selected>
+<Reason_Code>{Data.Element.Menu_Usage_Logs_Parameters.reasonCodes}</Reason_Code>
+</nklviwnaspovnqwnfl1:Menu_Usage_Log>
+</part>
+</input_parameter_configs>
+<output_parameter_configs store_response_xml="true">
+<queries>
+<part name="parameters">
+<query storein="element" varname="result">/Menu_Usage_LogResponse/Result</query>
+<query storein="element" varname="message">/Menu_Usage_LogResponse/Message</query>
+</part>
+</queries>
+</output_parameter_configs>
+<requires_http_authentication>true</requires_http_authentication>
+<username>{Data.Session.USER}</username>
+<password>{Data.Session.PASSWORD}</password>
+<use_substitution_for_password>true</use_substitution_for_password>
+<use_proxy>false</use_proxy>
+<proxy_host/>
+<proxy_port/>
+<connect_timeout>8</connect_timeout>
+<local_events>
+<local_event>
+<name>error</name>
+<eventlist>java.lang.Exception</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</web_service>

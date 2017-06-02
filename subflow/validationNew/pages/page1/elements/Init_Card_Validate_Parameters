@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@16431501:1496089976758" name="Init_Card_Validate_Parameters" version="6.0.1">
+<config>
+<dynamic base_config="true" type="Class">com.manulife.ivr.action.DynamicSetTimeStamp</dynamic>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+<element_data>
+<data create_when="After" name="Result" storable="false" type="Boolean">true</data>
+<data create_when="After" name="message" storable="false" type="String"> </data>
+<data create_when="After" name="cardSecurityReturnText" storable="false" type="String"> </data>
+<data create_when="After" name="cardSecurityReturnNumber" storable="false" type="String"> </data>
+</element_data>
+</config>
+</action_element>

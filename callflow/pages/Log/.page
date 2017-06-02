@@ -1,18 +1,95 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <page id="Page@17022263:1494272975743" name="Log" version="6.0.1">
-<element height="46" id="Element@8093182:1494272975743" name="Log" type="Page Entry" width="82" x="80" y="27">
+<element height="46" id="Element@8093182:1494272975743" name="Log" type="Page Entry" width="82" x="42" y="31">
 <exit_states>
 <exit_state name="next" target="Element@8735198:1494388257466"/>
 </exit_states>
 </element>
-<element height="46" id="Element@5868584:1494273958751" name="CVP Subdialog Return_01" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="183" x="312" y="322">
+<element height="46" id="Element@5868584:1494273958751" name="Normal" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="90" x="46" y="720">
 <exit_states>
 <exit_state name="done"/>
 </exit_states>
 </element>
-<element height="46" id="Element@8735198:1494388257466" name="IVR_Logs_Parameters" src="com.itsp.cvp.action.ItspCustomApplicationModifier" type="Action Element" width="161" x="224" y="27">
+<element height="46" id="Element@8735198:1494388257466" name="IVR_Logs_Parameters" src="com.itsp.cvp.action.ItspCustomApplicationModifier" type="Action Element" width="161" x="186" y="31">
 <exit_states>
-<exit_state name="done" target="Element@5868584:1494273958751"/>
+<exit_state name="done" target="Element@248210:1494428445785"/>
+</exit_states>
+</element>
+<element height="46" id="Element@248210:1494428445785" name="Call_Summary_Logs_Parameters" src="com.itsp.cvp.action.ItspCustomApplicationModifier" type="Action Element" width="220" x="432" y="31">
+<exit_states>
+<exit_state name="done" target="Element@32625226:1494429924213"/>
+</exit_states>
+</element>
+<element height="46" id="Element@32625226:1494429924213" name="Call_Summary_Logs_Web Service" type="Web Service" width="225" x="154" y="117">
+<exit_states>
+<exit_state name="done" target="Element@26847883:1494447052930"/>
+<exit_state name="Java Exception-error" target="Element@27325298:1494446339900"/>
+</exit_states>
+</element>
+<element height="47" id="Element@27325298:1494446339900" name="Call_Summary_Backup_Action" src="com.manulife.ivr.action.WiterLogRecordsToFile" type="Action Element" width="219" x="432" y="116">
+<exit_states>
+<exit_state name="done" target="Element@4047303:1494447138841"/>
+</exit_states>
+</element>
+<element height="46" id="Element@26847883:1494447052930" name="Decision_Call_Summary_Logs_Web Service_Result" type="Decision" width="312" x="110" y="202">
+<exit_states>
+<exit_state name="T" target="Element@4047303:1494447138841"/>
+<exit_state name="F" target="Element@27325298:1494446339900"/>
+</exit_states>
+</element>
+<element height="46" id="Element@4047303:1494447138841" name="Transaction_Logs_Parameters" src="com.itsp.cvp.action.ItspCustomApplicationModifier" type="Action Element" width="206" x="163" y="274">
+<exit_states>
+<exit_state name="done" target="Element@3437086:1494447168893"/>
+</exit_states>
+</element>
+<element height="46" id="Element@3437086:1494447168893" name="Transaction_Logs_Web Services" type="Web Service" width="216" x="158" y="344">
+<exit_states>
+<exit_state name="done" target="Element@4459811:1494447581163"/>
+<exit_state name="Java Exception-error" target="Element@19434867:1494447541903"/>
+</exit_states>
+</element>
+<element height="47" id="Element@19434867:1494447541903" name="Transaction_Backup_Action" src="com.manulife.ivr.action.WiterLogRecordsToFile" type="Action Element" width="259" x="412" y="343">
+<exit_states>
+<exit_state name="done" target="Element@27073641:1494447660840"/>
+</exit_states>
+</element>
+<element height="46" id="Element@4459811:1494447581163" name="Decision_Transaction_Logs_Web Service_Result" type="Decision" width="298" x="116" y="429">
+<exit_states>
+<exit_state name="T" target="Element@27073641:1494447660840"/>
+<exit_state name="F" target="Element@19434867:1494447541903"/>
+</exit_states>
+</element>
+<element height="46" id="Element@27073641:1494447660840" name="Menu_Usage_Logs_Parameters" src="com.itsp.cvp.action.ItspCustomApplicationModifier" type="Action Element" width="212" x="159" y="493">
+<exit_states>
+<exit_state name="done" target="Element@19217784:1494447696875"/>
+</exit_states>
+</element>
+<element height="46" id="Element@19217784:1494447696875" name="Menu_Usage_Logs_Web Services" type="Web Service" width="260" x="135" y="564">
+<exit_states>
+<exit_state name="done" target="Element@18130257:1494447983384"/>
+<exit_state name="Java Exception-error" target="Element@7688104:1494447971308"/>
+</exit_states>
+</element>
+<element height="47" id="Element@7688104:1494447971308" name="Menu_Usage_Backup_Action" src="com.manulife.ivr.action.WiterLogRecordsToFile" type="Action Element" width="259" x="412" y="568">
+<exit_states>
+<exit_state name="done" target="Element@27896005:1494448056388"/>
+</exit_states>
+</element>
+<element height="46" id="Element@18130257:1494447983384" name="Decision_Menu_Usage_Logs_Web Service_Result" type="Decision" width="304" x="113" y="639">
+<exit_states>
+<exit_state name="T" target="Element@27896005:1494448056388"/>
+<exit_state name="F" target="Element@7688104:1494447971308"/>
+</exit_states>
+</element>
+<element height="46" id="Element@27896005:1494448056388" name="Exit_Status" type="Decision" width="112" x="209" y="720">
+<exit_states>
+<exit_state name="SG" target="Element@15542409:1494448075748"/>
+<exit_state name="Normal" target="Element@5868584:1494273958751"/>
+</exit_states>
+</element>
+<element height="46" id="Element@15542409:1494448075748" name="SkillGroup" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="139" x="438" y="738">
+<exit_states>
+<exit_state name="done"/>
 </exit_states>
 </element>
 </page>

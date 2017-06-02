@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@28432530:1496089976758" name="CardNumReEnterCounter" version="6.0.1">
+<config>
+<settings>
+<setting name="initial">0</setting>
+<setting name="type">increment</setting>
+<setting name="step">1</setting>
+</settings>
+<element_data>
+<data create_when="After" name="afterCount" storable="true" type="String">{Data.Element.CardNumReEnterCounter.count}</data>
+</element_data>
+</config>
+</action_element>

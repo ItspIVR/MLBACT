@@ -10,7 +10,7 @@
 <setting name="min_digit">16</setting>
 <setting name="max_digit">17</setting>
 <setting name="modal">false</setting>
-<setting name="secure_logging">false</setting>
+<setting name="secure_logging">true</setting>
 <setting name="maxnbest">1</setting>
 </settings>
 <audio>
@@ -33,8 +33,13 @@
 </audio_item>
 </audio_group>
 </audio>
+<element_data>
+<data create_when="Before" name="menuLabel" storable="false" type="String">Card_Number_Enter</data>
+<data create_when="After" name="menuUsage" storable="true" type="String">[{Data.Session.menuUsageCallEndDateTime}={Data.Element.Card_Number_Enter.EndTime}, {Data.Session.menuUsageCallStartDateTime}={Data.Element.Card_Number_Enter.StartTime}, {Data.Session.menuUsageMenuLabel}={Data.Element.Card_Number_Enter.menuLabel}, {Data.Session.menuUsageSelectedOption}={Data.Session.Log_CardNum}, {Data.Session.menuUsageReasonCode}={Data.Element.Card_Number_Enter.value_confidence}]</data>
+</element_data>
 <session_data>
 <data create_when="After" name="CardNumber">{Data.Element.Card_Number_Enter.value}</data>
+<data create_when="After" name="menuUsageLog">{Data.Session.menuUsageLog}{Data.Element.Card_Number_Enter.menuUsage}</data>
 </session_data>
 </config>
 </voice_element>
